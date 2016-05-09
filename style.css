@@ -1,14 +1,14 @@
 @charset "UTF-8";
 /*!
  * Theme Name: uWebDesign Genesis Child Theme
- * Theme URI: https://uwebdesign.ru/
+ * Theme URI: https://github.com/websanya/uwebdesign-genesis
  * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru/
- * Version: 1.0.0 alpha 2
+ * Version: 1.0.0 alpha 4
  * Template: genesis
  * Template Version: 2.2.2
- * GitHub Theme URI: https://github.com/afragen/test-child
+ * GitHub Theme URI: https://github.com/websanya/uwebdesign-genesis
  * GitHub Branch: master
  */
 .module {
@@ -2282,4 +2282,12 @@ a.smartape-this:after {
 .smartape-this-image {
   max-width: 165px;
   margin: auto;
+}
+
+/* # Yandex Share 2
+---------------------------------------------------------------------------------------------------- */
+/* ## Button container.
+--------------------------------------------- */
+.ya-share2 ul {
+  margin: 0;
 }

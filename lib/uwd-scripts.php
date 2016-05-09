@@ -43,8 +43,9 @@ function uwd_dashicons() {
 	}
 }
 
-//* Add uWebDesign script.
-add_action( 'wp_enqueue_scripts', 'uwd_color_thief_script' );
-function uwd_color_thief_script() {
+//* Add uWebDesign scripts.
+add_action( 'wp_enqueue_scripts', 'uwd_scripts' );
+function uwd_scripts() {
 	wp_enqueue_script( 'uwd-color-thief', get_stylesheet_directory_uri() . '/js/min/uwebdesign.min.js', array(), '', true );
+	wp_enqueue_script( 'uwd-ya-share', 'https://yastatic.net/share2/share.js', array(), '', false );
 }

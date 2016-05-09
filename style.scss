@@ -1,13 +1,13 @@
 /*!
  * Theme Name: uWebDesign Genesis Child Theme
- * Theme URI: https://uwebdesign.ru/
+ * Theme URI: https://github.com/websanya/uwebdesign-genesis
  * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru/
- * Version: 1.0.0 alpha 2
+ * Version: 1.0.0 alpha 4
  * Template: genesis
  * Template Version: 2.2.2
- * GitHub Theme URI: https://github.com/afragen/test-child
+ * GitHub Theme URI: https://github.com/websanya/uwebdesign-genesis
  * GitHub Branch: master
  */
 
@@ -127,3 +127,8 @@
 ---------------------------------------------------------------------------------------------------- */
 
 @import "scss/vendor/uwd";
+
+/* # Yandex Share 2
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/vendor/ya-share";
