@@ -1,0 +1,53 @@
+/* ## Primary Sidebar
+--------------------------------------------- */
+
+.sidebar-primary {
+	//background: rgba(red, 0.1);
+}
+
+.sidebar {
+	li {
+		border-bottom: $border-tiny dotted rgba(uwd-color('black'), 0.4);
+		margin-bottom: $margin-tiny;
+		padding-bottom: $padding-inner-x-small - $border-tiny;
+		list-style: none;
+		&:last-child {
+			border: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+		a {
+			display: block;
+		}
+	}
+}
+
+/* ## Widget Container
+--------------------------------------------- */
+
+.widget {
+	margin-bottom: $margin-small;
+	padding: $padding-inner-small;
+	background: rgba(uwd-color('gray'), 0.3);
+	@include breakpoint($kyle) {
+		padding: $padding-inner-large;
+		margin-bottom: $margin-large;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.widget-title {
+	font-size: $font-size-h4;
+}
+
+/* ## UWD Banner Widget
+--------------------------------------------- */
+
+.widget_uwd_banner_widget {
+	img {
+		margin: auto;
+		width: 27rem;
+	}
+}

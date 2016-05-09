@@ -1,0 +1,86 @@
+/* ## Comments
+--------------------------------------------- */
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+	padding: $padding-inner-small;
+	margin-bottom: $margin-tiny;
+	@include breakpoint($kyle) {
+		padding: $padding-inner-large;
+		margin-bottom: $margin-large;
+	}
+	background: rgba(uwd-color('gray'), 0.3);
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.comment-list-title {
+	font-size: $font-size-h3;
+}
+
+li.comment {
+	background: rgba(uwd-color('gray'), 0.3);
+	margin-top: $margin-small;
+}
+
+.comment-content {
+	clear: both;
+	word-wrap: break-word;
+}
+
+.comment-reply {
+	margin-top: $margin-small;
+}
+
+.comment-list {
+	li {
+		padding: $padding-inner-x-small 0 0 $padding-inner-x-small;
+		list-style-position: inside;
+	}
+	li.comment {
+		padding: $padding-inner-small 0 $padding-inner-small $padding-inner-small;
+		list-style: none;
+	}
+	.comment-content > ul > li:first-child {
+		padding-top: 0;
+	}
+	.comment-content > ol > li:first-child {
+		padding-top: 0;
+	}
+}
+
+.comment-respond {
+	input,
+	textarea {
+		display: block;
+	}
+	input[type="email"],
+	input[type="text"],
+	input[type="url"] {
+		width: 50%;
+	}
+	label {
+		display: block;
+		margin-bottom: $margin-tiny;
+	}
+	.required {
+		color: uwd-color('blue');
+	}
+	.form-submit {
+		margin-bottom: 0;
+	}
+}
+
+.entry-comments .comment-author {
+	margin-bottom: 0;
+}
+
+.entry-pings .reply {
+	display: none;
+}
+
+li.bypostauthor {
+	background: linear-gradient(to right, rgba(uwd-color('pink'), 0.3), rgba(uwd-color('blue'), 0.3));
+}

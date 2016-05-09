@@ -1,0 +1,106 @@
+/* ## Tweet this shortcode.
+--------------------------------------------- */
+
+a.tweet-this {
+	margin-bottom: $margin-small;
+	padding: $padding-inner-small;
+	display: block;
+	position: relative;
+	font-size: $font-size-h3;
+	text-align: center;
+	color: initial;
+	@include breakpoint($kyle) {
+		margin-bottom: $margin-large;
+		padding: $padding-inner-large;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	&:before {
+		content: "";
+		width: 70%;
+		display: block;
+		border-top: 1px solid black;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		@include transform(translateX(-50%));
+	}
+	&:after {
+		content: "";
+		width: 70%;
+		display: block;
+		border-top: 1px solid black;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		@include transform(translateX(-50%));
+	}
+}
+
+.tweet-this-inner {
+	margin-top: $margin-tiny;
+	display: block;
+	font-size: $font-size-tiny;
+	.dashicons {
+		font-size: $font-size-p;
+		color: #55acee;
+		vertical-align: bottom;
+	}
+}
+
+/* ## SmartApe this shortcode.
+--------------------------------------------- */
+
+a.smartape-this {
+	margin: $margin-small 0;
+	padding: $padding-inner-small;
+	display: block;
+	position: relative;
+	font-size: $font-size-h4;
+	text-align: center;
+	color: initial;
+	@include breakpoint($kyle) {
+		margin: $margin-large 0;
+		padding: $padding-inner-large;
+		font-size: $font-size-h3;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	&:before {
+		content: "";
+		width: 70%;
+		display: block;
+		border-top: 1px solid black;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		@include transform(translateX(-50%));
+	}
+	&:after {
+		content: "";
+		width: 70%;
+		display: block;
+		border-top: 1px solid black;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		@include transform(translateX(-50%));
+	}
+}
+
+.smartape-this-icon {
+	display: block;
+	margin-top: $margin-tiny;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: $font-size-p;
+	vertical-align: bottom;
+}
+
+.smartape-this-image {
+	max-width: 165px;
+	margin: auto;
+	//margin-top: $margin-tiny;
+}

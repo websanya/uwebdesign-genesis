@@ -1,0 +1,23 @@
+/* ## Styling Form Container & Stuff
+--------------------------------------------- */
+
+body div.wpcf7 {
+	margin-top: $margin-small;
+	img.ajax-loader {
+		display: inline-block;
+		margin-left: 1rem;
+	}
+	div.wpcf7-response-output {
+		padding: $padding-inner-tiny;
+		margin: $margin-small 0 0;
+	}
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		margin-top: $margin-tiny;
+	}
+}
+

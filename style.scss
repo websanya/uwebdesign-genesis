@@ -1,0 +1,129 @@
+/*!
+ * Theme Name: uWebDesign Genesis Child Theme
+ * Theme URI: https://uwebdesign.ru/
+ * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
+ * Author: Alexander Goncharov
+ * Author URI: https://websanya.ru/
+ * Version: 1.0.0 alpha 1
+ * Template: genesis
+ * Template Version: 2.2.2
+ * GitHub Theme URI: https://github.com/afragen/test-child
+ * GitHub Branch: master
+ */
+
+//* # Vendor imports
+//-------------------------------------------------------------------------------------------------- */
+
+@import 'scss/vendor/bourbon/bourbon';
+@import 'scss/vendor/breakpoint/breakpoint';
+
+//* # Table of Contents
+//-------------------------------------------------------------------------------------------------- */
+
+//- Utilities
+//	- Colors
+//	- Breakpoints
+//- HTML5 Reset
+//	- Baseline Normalize
+//	- Box Sizing
+//- Defaults
+//	- Typographical Elements
+//	- Headings
+//	- Objects
+//	- Gallery
+//	- Forms
+//	- Tables
+//	- Screen Reader Text
+//- Structure and Layout
+//	- Site Containers
+//	- Column Widths and Positions
+//	- Column Classes
+//- Common Classes
+//	- Avatar
+//	- Genesis
+//	- WordPress
+//	- WordPress Gallery
+//- Widgets
+//- Site Header
+//	- Title Area
+//	- Widget Area
+//- Site Navigation
+//	- Primary Navigation
+//- Content Area
+//	- Entries
+//	- Entry Meta
+//	- Pagination
+//	- Comments
+//- Sidebars
+//- Site Footer
+
+//*/
+
+//* # Utilities
+//-------------------------------------------------------------------------------------------------- */
+
+@import "scss/_utilities/utilities";
+
+/* # HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/base/base";
+
+/* # Defaults
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/base/defaults";
+
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/layout/layout";
+
+/* # Common Classes
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/vendor/wp";
+
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/modules/header";
+
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/modules/navigation";
+
+/* # Content Area
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/modules/content";
+@import "scss/modules/entries";
+@import "scss/modules/pagination";
+@import "scss/modules/comments";
+
+/* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/modules/sidebars";
+@import "scss/modules/footer-widgets";
+
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/modules/footer";
+
+/* # Adobe Typekit
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/vendor/typekit";
+
+/* # Contact Form 7
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/vendor/contact-form-7";
+
+/* # uWebDesign custom plugins
+---------------------------------------------------------------------------------------------------- */
+
+@import "scss/vendor/uwd";

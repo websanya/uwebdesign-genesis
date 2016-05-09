@@ -1,0 +1,37 @@
+/* ## Header Container
+--------------------------------------------- */
+
+.site-header {
+	background: rgba(uwd-color('gray'), 0.3);
+}
+
+/* ## Title Area
+--------------------------------------------- */
+
+.title-area {
+	text-align: center;
+	@include breakpoint($kyle) {
+		text-align: left;
+	}
+}
+
+.site-title {
+	font-size: $font-size-h1;
+	line-height: $line-height-large;
+	font-weight: 400;
+	a,
+	a:hover,
+	a:focus {
+		color: uwd-color('black');
+	}
+}
+
+.site-description {
+	font-size: $font-size-h5;
+	line-height: $line-height-tiny;
+}
+
+.site-description,
+.site-title {
+	margin-bottom: 0;
+}

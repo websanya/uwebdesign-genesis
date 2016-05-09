@@ -1,0 +1,80 @@
+/* ## Primary Navigation
+--------------------------------------------- */
+
+.nav-primary {
+	background: rgba(uwd-color('black'), 0.3);
+	.menu-primary {
+		background: rgba(uwd-color('black'), 0.7);
+	}
+	/* Colorful stripes. */
+	&:before, &::after {
+		display: block;
+		content: "";
+		height: 0.5rem;
+		background: linear-gradient(to right, uwd-color('pink'), uwd-color('blue'));
+	}
+}
+
+.menu-primary {
+	white-space: nowrap;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	@include breakpoint($kyle) {
+		overflow: visible;
+	}
+	li {
+		display: inline-block;
+	}
+	a {
+		display: block;
+		float: left;
+		padding: 1.5rem 1rem;
+		&:hover {
+			color: uwd-color('pink');
+			text-decoration: none;
+		}
+	}
+}
+
+.menu-item-has-children {
+	position: relative;
+	ul {
+		display: none;
+	}
+	@include breakpoint($kyle) {
+		&:hover ul {
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 10;
+			background: rgba(uwd-color('black'), .8);
+			li {
+				display: block;
+				white-space: nowrap;
+			}
+		}
+		&:first-child:hover ul {
+			left: - 0.5rem;
+			a {
+				margin-left: 0.5rem;
+			}
+		}
+		& > a {
+			&::after {
+				content: "";
+				display: inline-block;
+				vertical-align: bottom;
+				margin-left: 1rem;
+				width: 0;
+				height: 0;
+				border-top: 0.6rem solid white;
+				border-left: 0.6rem solid transparent;
+				border-right: 0.6rem solid transparent;
+				border-bottom: 0.6rem solid transparent
+			}
+		}
+	}
+}
