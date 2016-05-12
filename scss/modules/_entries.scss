@@ -225,8 +225,10 @@
 --------------------------------------------- */
 
 .entry-content-icon {
-	//margin-top: $margin-tiny + $margin-small;
 	margin: 0;
+	.format-link & {
+		margin-bottom: $margin-small;
+	}
 	.dashicons {
 		position: absolute;
 		width: 10rem;
@@ -332,7 +334,7 @@ h2.entry-content-weekly-item-title {
 --------------------------------------------- */
 
 .post-edit-link {
-	margin-top: $margin-small;
+	margin: $margin-small 0;
 	display: block;
 }
 

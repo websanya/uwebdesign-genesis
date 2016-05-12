@@ -5,7 +5,7 @@
  * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru/
- * Version: 1.0.0 alpha 4
+ * Version: 1.0.0 alpha 5
  * Template: genesis
  * Template Version: 2.2.2
  * GitHub Theme URI: https://github.com/websanya/uwebdesign-genesis
@@ -1707,6 +1707,10 @@ body.single-weekly .entry-content {
   margin: 0;
 }
 
+.format-link .entry-content-icon {
+  margin-bottom: 2rem;
+}
+
 .entry-content-icon .dashicons {
   position: absolute;
   width: 10rem;
@@ -1867,7 +1871,7 @@ h2.entry-content-weekly-item-title {
 /* ## Entry Edit Link
 --------------------------------------------- */
 .post-edit-link {
-  margin-top: 2rem;
+  margin: 2rem 0;
   display: block;
 }
 

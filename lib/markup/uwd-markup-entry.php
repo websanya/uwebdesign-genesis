@@ -54,7 +54,7 @@ function uwd_entry_ya_share() {
 	$entry_image_src = wp_get_attachment_image_src( $entry_image_id, 'uwd-custom-medium' )[0];
 	?>
 	<script>
-		var share = Ya.share2( '#share-<?php echo get_the_ID(); ?>', {
+		var share = Ya.share2( 'share-<?php echo get_the_ID(); ?>', {
 			//* Get all the content related to post.
 			content: {
 				url: '<?php the_permalink(); ?>',
