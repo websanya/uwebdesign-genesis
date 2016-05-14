@@ -16,7 +16,7 @@ function alter_query( $query ) {
 		if ( is_post_type_archive() ) {
 			return;
 		}
-		$query->set( 'post_type', array( 'post', 'weekly', 'video' ) );
+		$query->set( 'post_type', array( 'post', 'weeklies', 'videos' ) );
 	} else {
 		return;
 	}

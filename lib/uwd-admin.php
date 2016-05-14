@@ -1,6 +1,6 @@
 <?php
 /**
- * Some customizations made to the website admin.
+ * Some customizations made to the website admin: sidebars, metaboxes, etc..
  */
 
 //* Deregister default sidebars.
@@ -27,12 +27,6 @@ function uwd_remove_layouts( $_genesis_theme_settings_pagehook ) {
 	remove_meta_box( 'genesis-theme-settings-layout', $_genesis_theme_settings_pagehook, 'main' );
 	remove_meta_box( 'genesis-theme-settings-header', $_genesis_theme_settings_pagehook, 'main' );
 	remove_meta_box( 'genesis-theme-settings-blogpage', $_genesis_theme_settings_pagehook, 'main' );
-}
-
-//* Remove Yoast SEO metabox on banner page.
-add_action( 'add_meta_boxes', 'uwd_remove_meta_boxes', 100000 );
-function uwd_remove_meta_boxes() {
-	remove_meta_box( 'wpseo_meta', 'banner', 'normal' );
 }
 
 //* Remove Genesis Page Templates.

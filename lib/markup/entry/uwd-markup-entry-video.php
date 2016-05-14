@@ -3,7 +3,7 @@
 //* Markup for Video post type's video.
 add_action( 'genesis_entry_header', 'uwd_entry_video_type_video', 16 );
 function uwd_entry_video_type_video() {
-	if ( get_post_type() != 'video' || ! is_single() ) {
+	if ( get_post_type() != 'videos' || ! is_single() ) {
 		return;
 	}
 	$video_url = get_field( 'video_url' );
@@ -21,7 +21,7 @@ function uwd_entry_video_type_video() {
 //* Add icon markup for Video post type.
 add_action( 'genesis_entry_content', 'uwd_entry_video_type_icon' );
 function uwd_entry_video_type_icon() {
-	if ( get_post_type() != 'video' ) {
+	if ( get_post_type() != 'videos' ) {
 		return;
 	}
 	?>
@@ -31,21 +31,5 @@ function uwd_entry_video_type_icon() {
 	<?php
 }
 
-//* Customize entry-meta for video post type (actually for all of them).
-add_filter( 'genesis_post_meta', 'uwd_entry_video_type_taxonomy' );
-function uwd_entry_video_type_taxonomy() {
-	return '[post_categories] [post_tags] [post_terms]';
-}
-
-//* Customize 'post_terms' shortcode default args.
-add_filter( 'genesis_post_terms_shortcode_defaults', 'uwd_entry_test' );
-function uwd_entry_test() {
-	$args = array(
-		'after'    => '',
-		'before'   => 'Тип видео: ',
-		'sep'      => ', ',
-		'taxonomy' => 'video-type',
-	);
-
-	return $args;
-}
+//* Add meta support for videos.
+add_post_type_support( 'videos', 'genesis-entry-meta-after-content' );

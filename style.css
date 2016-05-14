@@ -5,7 +5,7 @@
  * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru/
- * Version: 1.0.0 alpha 5
+ * Version: 1.0.0 alpha 6
  * Template: genesis
  * Template Version: 2.2.2
  * GitHub Theme URI: https://github.com/websanya/uwebdesign-genesis
@@ -1411,7 +1411,6 @@ div.gallery {
 /* ## Entry Container
 --------------------------------------------- */
 .entry {
-  position: relative;
   margin-bottom: 2rem;
   background: rgba(216, 216, 216, 0.3);
 }
@@ -1454,32 +1453,32 @@ div.gallery {
 }
 
 body.page .entry-header,
-body.single-video .entry-header,
-body.single-weekly .entry-header {
+body.single-videos .entry-header,
+body.single-weeklies .entry-header {
   padding: 2rem 0;
 }
 
 @media (min-width: 770px) {
   body.page .entry-header,
-  body.single-video .entry-header,
-  body.single-weekly .entry-header {
+  body.single-videos .entry-header,
+  body.single-weeklies .entry-header {
     padding: 3rem 0;
   }
 }
 
 body.page .entry-header .entry-title,
 body.page .entry-header .entry-meta,
-body.single-video .entry-header .entry-title,
-body.single-video .entry-header .entry-meta,
-body.single-weekly .entry-header .entry-title,
-body.single-weekly .entry-header .entry-meta {
+body.single-videos .entry-header .entry-title,
+body.single-videos .entry-header .entry-meta,
+body.single-weeklies .entry-header .entry-title,
+body.single-weeklies .entry-header .entry-meta {
   margin-bottom: 0;
   text-align: center;
 }
 
 body.page .entry-header .entry-title,
-body.single-video .entry-header .entry-title,
-body.single-weekly .entry-header .entry-title {
+body.single-videos .entry-header .entry-title,
+body.single-weeklies .entry-header .entry-title {
   font-size: 3.6rem;
 }
 
@@ -1549,7 +1548,7 @@ body.single-weekly .entry-header .entry-title {
 /* ## Entry Content
 --------------------------------------------- */
 .entry-content {
-  overflow: hidden;
+  position: relative;
   padding: 0 2rem;
   margin-bottom: 2rem;
 }
@@ -1570,16 +1569,6 @@ body.single-weekly .entry-header .entry-title {
   .page .entry-content,
   .error404 .entry-content {
     padding: 0 3rem 3rem;
-  }
-}
-
-body.single-weekly .entry-content {
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 770px) {
-  body.single-weekly .entry-content {
-    margin-bottom: 1rem;
   }
 }
 
@@ -1717,8 +1706,8 @@ body.single-weekly .entry-content {
   height: 10rem;
   background: rgba(216, 216, 216, 0.3);
   border-radius: 50%;
-  bottom: 0.75rem;
-  right: 0.75rem;
+  bottom: -2rem;
+  right: 1rem;
 }
 
 .entry-content-icon .dashicons:before {
@@ -1751,7 +1740,7 @@ body.single-weekly .entry-content {
 
 /* ## Entry Type Video
 --------------------------------------------- */
-.single-video .entry-header {
+.single-videos .entry-header {
   margin-bottom: 0;
 }
 

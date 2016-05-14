@@ -2,7 +2,6 @@
 --------------------------------------------- */
 
 .entry {
-	position: relative;
 	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
 		margin-bottom: $margin-large;
@@ -32,8 +31,8 @@
 		background-color: inherit;
 	}
 	body.page &,
-	body.single-video &,
-	body.single-weekly & {
+	body.single-videos &,
+	body.single-weeklies & {
 		padding: $padding-inner-small 0;
 		@include breakpoint($kyle) {
 			padding: $padding-inner-large 0;
@@ -96,7 +95,7 @@
 --------------------------------------------- */
 
 .entry-content {
-	overflow: hidden;
+	position: relative;
 	padding: 0 $padding-inner-small;
 	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
@@ -110,12 +109,12 @@
 			padding: 0 $padding-inner-large $padding-inner-large;
 		}
 	}
-	body.single-weekly & {
-		margin-bottom: $margin-small;
-		@include breakpoint($kyle) {
-			margin-bottom: $margin-tiny;
-		}
-	}
+	//body.single-weeklies & {
+	//	margin-bottom: $margin-small;
+	//	@include breakpoint($kyle) {
+	//		margin-bottom: $margin-tiny;
+	//	}
+	//}
 	&.no-posts {
 		padding: $padding-inner-small;
 		@include breakpoint($kyle) {
@@ -235,8 +234,8 @@
 		height: 10rem;
 		background: rgba(uwd-color('gray'), 0.3);
 		border-radius: 50%;
-		bottom: $padding-inner-tiny;
-		right: $padding-inner-tiny;
+		bottom: - $padding-inner-small;
+		right: $padding-inner-x-small;
 		@include breakpoint($kyle) {
 			//bottom: $padding-inner-large;
 			//right: $padding-inner-large;
@@ -266,7 +265,7 @@
 /* ## Entry Type Video
 --------------------------------------------- */
 
-.single-video .entry-header {
+.single-videos .entry-header {
 	margin-bottom: 0;
 }
 
