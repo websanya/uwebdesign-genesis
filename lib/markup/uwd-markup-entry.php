@@ -25,13 +25,13 @@ add_action( 'genesis_entry_header', 'uwd_archive_do_post_image', 8 );
 function uwd_archive_do_post_image() {
 	if ( ! is_page() && ( ! is_single() || get_post_type() != 'videos' ) && ( ! is_single() || get_post_type() != 'weeklies' ) ) {
 		$img = genesis_get_image( array(
-			'format' => 'html',
+			'format' => 'url',
 			'size'   => 'medium_large',
 			'attr'   => genesis_parse_attr( 'entry-image', array() ),
 		) );
 
 		if ( ! empty( $img ) ) {
-			printf( '<a href="%s" aria-hidden="true">%s</a>', get_permalink(), $img );
+			printf( '<a href="%s" aria-hidden="true"><img class="post-image entry-image" src="%s" alt="' . get_the_title() .'"></a>', get_permalink(), $img );
 		} else {
 			printf( '<a href="%s" aria-hidden="true"><img width="622" height="415" class="post-image entry-image" src="%s" alt="placeholder image"></a>', get_permalink(), get_stylesheet_directory_uri() . '/img/placeholder.jpg' );
 		}

@@ -2,7 +2,15 @@
 --------------------------------------------- */
 
 .ya-share2 {
+
 	ul {
 		margin: 0;
 	}
+
+	.ya-share2__container_size_m .ya-share2__icon {
+		height: 22px;
+		width: 22px;
+		background-size: 22px 22px;
+	}
+
 }

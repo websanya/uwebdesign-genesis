@@ -1,16 +1,16 @@
 /* ## Styling Flash of Unstyled Text
 --------------------------------------------- */
 
-//.wf-loading {
-//	opacity: 0;
-//	visibility: hidden;
-//}
-//
-//.wf-active, .wf-inactive {
-//	opacity: 1;
-//	visibility: visible;
-//	-moz-transition: opacity 0.5s ease-in-out;
-//	-o-transition: opacity 0.5s ease-in-out;
-//	-webkit-transition: opacity 0.5s ease-in-out;
-//	transition: opacity 0.5s ease-in-out;
-//}
+.wf-loading {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.wf-active, .wf-inactive {
+	opacity: 1;
+	visibility: visible;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}

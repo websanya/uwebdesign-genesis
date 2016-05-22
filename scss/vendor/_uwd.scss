@@ -18,9 +18,9 @@ a.tweet-this {
 	}
 	&:before {
 		content: "";
-		width: 70%;
+		width: 60%;
 		display: block;
-		border-top: 1px solid black;
+		border-top: 1px solid uwd-color('black');
 		position: absolute;
 		top: 0;
 		left: 50%;
@@ -28,9 +28,9 @@ a.tweet-this {
 	}
 	&:after {
 		content: "";
-		width: 70%;
+		width: 60%;
 		display: block;
-		border-top: 1px solid black;
+		border-top: 1px solid uwd-color('black');
 		position: absolute;
 		bottom: 0;
 		left: 50%;
@@ -49,10 +49,10 @@ a.tweet-this {
 	}
 }
 
-/* ## SmartApe this shortcode.
+/* ## Link this shortcode.
 --------------------------------------------- */
 
-a.smartape-this {
+.shortcode-this {
 	margin: $margin-small 0;
 	padding: $padding-inner-small;
 	display: block;
@@ -62,7 +62,6 @@ a.smartape-this {
 	color: initial;
 	@include breakpoint($kyle) {
 		margin: $margin-large 0;
-		padding: $padding-inner-large;
 		font-size: $font-size-h3;
 	}
 	&:hover {
@@ -70,9 +69,9 @@ a.smartape-this {
 	}
 	&:before {
 		content: "";
-		width: 70%;
+		width: 60%;
 		display: block;
-		border-top: 1px solid black;
+		border-top: 1px solid uwd-color('black');
 		position: absolute;
 		top: 0;
 		left: 50%;
@@ -80,9 +79,9 @@ a.smartape-this {
 	}
 	&:after {
 		content: "";
-		width: 70%;
+		width: 60%;
 		display: block;
-		border-top: 1px solid black;
+		border-top: 1px solid uwd-color('black');
 		position: absolute;
 		bottom: 0;
 		left: 50%;
@@ -90,7 +89,7 @@ a.smartape-this {
 	}
 }
 
-.smartape-this-icon {
+.shortcode-this-icon {
 	display: block;
 	margin-top: $margin-tiny;
 	margin-left: auto;
@@ -99,8 +98,16 @@ a.smartape-this {
 	vertical-align: bottom;
 }
 
-.smartape-this-image {
+.shortcode-this-image {
 	max-width: 165px;
 	margin: auto;
-	//margin-top: $margin-tiny;
+	&.shorthcode-this-both {
+		display: inline-block;
+	}
+}
+
+.hearts-link {
+	&:hover {
+		text-decoration: none;
+	}
 }

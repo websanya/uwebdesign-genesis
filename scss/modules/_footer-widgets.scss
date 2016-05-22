@@ -6,6 +6,19 @@
 }
 
 .footer-widgets-widget {
-	background: rgba(uwd-color('black'), 0.7);
-	color: uwd-color('white');
+	background: rgba( uwd-color('gray'), 0.3);
+	ul {
+		li {
+			margin-bottom: $margin-tiny;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.donate-banner {
+	width: 100%;
+	max-height: 18rem;
+	object-fit: cover;
 }

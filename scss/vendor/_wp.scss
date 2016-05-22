@@ -61,7 +61,7 @@
 
 .author-box-title,
 .archive-title {
-	margin-bottom: $margin-small;
+	margin-bottom: $margin-tiny;
 	font-size: $font-size-h3;
 	line-height: $line-height-small;
 	&:last-child {
@@ -126,7 +126,7 @@ img.alignright,
 }
 
 .wp-caption-text {
-	font-size: 1.4rem;
+	font-size: $font-size-tiny;
 	text-align: center;
 }
 
@@ -141,7 +141,7 @@ img.alignright,
 .entry-content .wp-audio-shortcode,
 .entry-content .wp-playlist,
 .entry-content .wp-video {
-	margin: 0 0 2.8rem;
+	margin: 0 0 $margin-large;
 }
 
 /* ## WordPress Gallery
@@ -217,7 +217,6 @@ div.gallery {
 		margin: $margin-small 0;
 		&:last-child {
 			margin-bottom: 0;
-			dick: 'piska';
 		}
 	}
 	input[type="search"] {

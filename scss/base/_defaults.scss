@@ -66,6 +66,18 @@ dl {
 	}
 }
 
+ol,
+ul {
+	list-style-position: inside;
+	padding-left: $padding-inner-tiny;
+	li {
+		margin-bottom: $margin-micro;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
 dt,
 dd {
 	margin-bottom: 0;
@@ -106,7 +118,7 @@ q {
 blockquote {
 	margin: $margin-small 0;
 	padding: $padding-inner-x-small 0 $padding-inner-x-small $padding-inner-small - $border-small;
-	border-left: $border-small solid uwd-color('blue');
+	border-left: $border-small solid uwd-color('gray');
 }
 
 cite {
@@ -126,16 +138,17 @@ code,
 kbd,
 tt {
 	padding: $padding-inner-tiny / 3 $padding-inner-tiny;
-	background-color: uwd-color('black');
+	background-color: uwd-color('gray-dark');
 	color: uwd-color('white');
 	font-size: $font-size-tiny;
-	line-height: $font-size-tiny //* Hack for vertical rhythm;
+	line-height: $font-size-tiny; //* Hack for vertical rhythm;
+	vertical-align: middle;
 }
 
 pre {
 	margin: 0 0 $margin-small;
 	padding: $padding-inner-x-small 1.5 * $padding-inner-x-small;
-	background-color: uwd-color('black');
+	background-color: uwd-color('gray-dark');
 	color: uwd-color('white');
 	font-size: $font-size-tiny;
 }
@@ -223,7 +236,7 @@ textarea {
 	}
 	&:focus {
 		@include transition(box-shadow 0.1s ease-in-out);
-		box-shadow: 0px 0px 5px uwd-color('blue') inset;
+		box-shadow: 0 0 5px uwd-color('blue') inset;
 		outline: none;
 	}
 }
@@ -236,7 +249,7 @@ input[type="radio"] {
 
 input[type="search"] {
 	font-size: $font-size-tiny;
-	color: rgba(uwd-color('black'), 0.4)
+	color: uwd-color('gray');
 }
 
 button,
@@ -249,7 +262,7 @@ input[type="submit"],
 	color: uwd-color('white');
 	cursor: pointer;
 	font-size: $font-size-h5;
-	font-weight: 300;
+	font-weight: 400;
 	padding: $padding-inner-x-small $padding-inner-small;
 	width: auto;
 }
@@ -264,8 +277,8 @@ input:focus[type="button"],
 input:focus[type="reset"],
 input:focus[type="submit"],
 .button:focus {
-	background-color: uwd-color('pink');
-	color: uwd-color('black');
+	background-color: uwd-color('blue');
+	color: uwd-color('white');
 }
 
 .button {
@@ -294,10 +307,10 @@ th {
 }
 
 td {
-	border-top: 1px solid rgba(uwd-color('black'), 0.1);
+	border-top: 1px solid uwd-color('gray');
 	padding: 9px 0 10px 0;
 	@include breakpoint($kyle) {
-		border-top: 1px solid rgba(uwd-color('black'), 0.1);
+		border-top: 1px solid uwd-color('gray');
 		padding: 10px 0 11px 0;
 	}
 }

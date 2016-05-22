@@ -42,6 +42,9 @@ li.comment {
 	li.comment {
 		padding: $padding-inner-small 0 $padding-inner-small $padding-inner-small;
 		list-style: none;
+		&:target {
+			border: 5px solid uwd-color('yellow');
+		}
 	}
 	.comment-content > ul > li:first-child {
 		padding-top: 0;
@@ -82,5 +85,5 @@ li.comment {
 }
 
 li.bypostauthor {
-	background: linear-gradient(to right, rgba(uwd-color('pink'), 0.3), rgba(uwd-color('blue'), 0.3));
+	background: rgba(uwd-color('blue'), 0.1);
 }

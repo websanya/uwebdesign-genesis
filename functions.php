@@ -32,6 +32,7 @@ require_once( 'lib/markup/uwd-markup-entry.php' );
 require_once( 'lib/markup/uwd-markup-search.php' );
 require_once( 'lib/markup/uwd-markup-sidebar.php' );
 require_once( 'lib/markup/uwd-markup-footer-widgets.php' );
+require_once( 'lib/markup/uwd-markup-footer.php' );
 
 //* Translation markup stuff.
 require_once( 'lib/uwd-translate.php' );

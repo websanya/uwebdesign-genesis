@@ -1,29 +1,32 @@
 //* ### Color Declarations */
 
-$white-genesis: #f5f5f5;
-$white-default: #fff;
-$black-default: #000;
-$gray-css-tricks: #d8d8d8;
-$blue-css-tricks: #2793c7;
 $rose-quartz: #f7cac9;
-$serenity: #92A8D1;
-$goldenrod: goldenrod;
-$darkred: darkred;
 
-.module {
-	color: darkred;
-}
+//* CSS Colors.
+$white: white;
+$black: black;
+$cornflowerblue: cornflowerblue;
+$whitesmoke: whitesmoke;
+$gainsboro: gainsboro;
+$dimgray: dimgray;
+$firebrick: firebrick;
+$goldenrod: goldenrod;
+$palevioletred: palevioletred;
+$forestgreen: forestgreen;
 
 //* ### Color Map */
 
 $colors: (
-		'white': $white-default,
-		'black': $black-default,
-		'gray': $gray-css-tricks,
-		'blue': saturate($serenity, 30%),
-		'pink': saturate($rose-quartz, 30%),
+		'white': $white,
+		'black': $black,
+		'gray': $gainsboro,
+		'gray-light': $whitesmoke,
+		'gray-dark' : $dimgray,
+		'blue': $cornflowerblue,
+		'pink': $palevioletred,
 		'yellow': $goldenrod,
-		'red': $darkred
+		'red': $firebrick,
+		'green': $forestgreen,
 );
 
 //* ### Color Function */
