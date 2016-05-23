@@ -1,6 +1,4 @@
-// @codekit-prepend "jquery.js";
 // @codekit-prepend "color-thief.js";
-// @codekit-prepend "jquery.keeptherhythm.js";
 
 jQuery( window ).load( function() {
 	if ( document.getElementsByClassName( 'entry-image' ).length > 0 ) {

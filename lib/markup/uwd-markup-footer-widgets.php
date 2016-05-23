@@ -11,7 +11,7 @@ function uwd_footer_widgets_markup() {
 				<li><a href="<?php echo home_url( 'about' ); ?>">О проекте</a></li>
 				<li><a href="<?php echo home_url( 'faq' ); ?>">Часто задаваемые вопросы</a></li>
 				<li><a href="<?php echo home_url( 'advertise' ); ?>">Реклама на uWebDesign</a></li>
-				<li><a href="<?php echo home_url( 'subscribe' ); ?>">Подпишись на нас</a></li>
+				<li><a href="<?php echo home_url( 'subscribe' ); ?>">Мы в соц. сетях</a></li>
 				<li><a href="<?php echo home_url( 'contact' ); ?>">Связаться с нами</a></li>
 			</ul>
 		</div>
@@ -38,7 +38,10 @@ function uwd_footer_widgets_markup() {
 			</div>
 		</div>
 		<div class="footer-widgets-widget">
-			<img class="donate-banner" src="<?php echo get_stylesheet_directory_uri(); ?>/img/doshik.jpg" alt="Пожертвуй на развитие проекта">
+			<a href="<?php echo home_url( 'donate' ); ?>">
+				<img class="donate-banner" src="<?php echo get_stylesheet_directory_uri(); ?>/img/doshik.jpg"
+				     alt="Пожертвуй на развитие проекта">
+			</a>
 		</div>
 	</aside>
 	<?php

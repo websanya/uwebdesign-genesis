@@ -29,23 +29,6 @@ function genesis_404() {
 
 			<?php echo get_search_form(); ?>
 
-			<p>
-				<?php do_shortcode( '[uwd_articles]' ); ?>
-			</p>
-			<p>
-				<?php do_shortcode( '[tweet_this]testing of wrapping shortcode[/tweet_this]' ) ?>
-			</p>
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nobis reprehenderit vitae. Accusamus
-				asperiores assumenda corporis fuga minima, modi molestiae nemo nesciunt perspiciatis quisquam quod
-				ratione sequi, suscipit tempore voluptate!</p>
-			<p>A aliquam animi aperiam architecto cupiditate delectus deserunt dicta doloremque ea ex facere, id in,
-				molestiae neque numquam pariatur quia quidem rerum sapiente sed suscipit tenetur velit vitae voluptas
-				voluptatibus.</p>
-			<p>Accusantium aliquid, commodi ducimus earum eius excepturi fugiat fugit id illo iusto maiores, molestias
-				mollitia nobis odit porro praesentium quidem quod recusandae reiciendis rem suscipit ullam voluptatem
-				voluptates. Adipisci, ipsam.</p>
-
 		</div>
 
 	</article>

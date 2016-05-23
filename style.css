@@ -5,7 +5,7 @@
  * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru/
- * Version: 1.0.1
+ * Version: 1.0.2
  * Template: genesis
  * Template Version: 2.2.2
  * GitHub Theme URI: https://github.com/websanya/uwebdesign-genesis
@@ -2123,7 +2123,7 @@ body div.wpcf7 img.ajax-loader {
 }
 
 body div.wpcf7 div.wpcf7-response-output {
-  padding: 2rem;
+  padding: 1rem;
   margin: 2rem 0 0;
 }
 
