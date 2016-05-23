@@ -85,6 +85,7 @@
 	object-fit: cover;
 	max-height: 15rem;
 	@include breakpoint($stan) {
+		margin: $margin-micro;
 		width: 40%;
 		max-height: none;
 		height: 20rem;

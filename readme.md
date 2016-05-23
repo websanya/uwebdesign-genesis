@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.0.6
+* Small CSS fixes.
+
 ### 1.0.5
 * Removed debug grid.
 

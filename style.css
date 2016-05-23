@@ -5,7 +5,7 @@
  * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru/
- * Version: 1.0.5
+ * Version: 1.0.6
  * Template: genesis
  * Template Version: 2.2.2
  * GitHub Theme URI: https://github.com/websanya/uwebdesign-genesis
@@ -702,7 +702,7 @@ input[type="radio"] {
 
 input[type="search"] {
   font-size: 1.4rem;
-  color: gainsboro;
+  color: black;
 }
 
 button,
@@ -1462,6 +1462,7 @@ body.single-weeklies .entry-header .entry-title {
 
 @media (min-width: 480px) {
   .entry-image {
+    margin: 0.5rem;
     width: 40%;
     max-height: none;
     height: 20rem;
