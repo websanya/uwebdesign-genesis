@@ -12,7 +12,7 @@ function uwd_entry_video_type_video() {
 	$video_id  = $step2[0];
 	?>
 	<div class="entry-video">
-		<iframe width="100%" height="390" src="http://www.youtube.com/embed/<?php echo $video_id; ?>"
+		<iframe width="100%" height="390" src="https://www.youtube.com/embed/<?php echo $video_id; ?>"
 		        frameborder="0"></iframe>
 	</div>
 	<?php

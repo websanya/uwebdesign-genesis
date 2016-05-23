@@ -241,6 +241,14 @@ textarea {
 	}
 }
 
+input,
+select {
+	height: 3rem;
+	@include breakpoint($kyle) {
+		height: 4rem;
+	}
+}
+
 input[type="checkbox"],
 input[type="image"],
 input[type="radio"] {

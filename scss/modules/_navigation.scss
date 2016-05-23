@@ -32,3 +32,12 @@
 		}
 	}
 }
+
+.menu-item-important {
+	a {
+		color: uwd-color('yellow');
+		&:hover {
+			//color: uwd-color('white');
+		}
+	}
+}

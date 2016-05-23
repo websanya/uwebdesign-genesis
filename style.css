@@ -5,7 +5,7 @@
  * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru/
- * Version: 1.0.0
+ * Version: 1.0.1
  * Template: genesis
  * Template Version: 2.2.2
  * GitHub Theme URI: https://github.com/websanya/uwebdesign-genesis
@@ -680,6 +680,18 @@ textarea:focus {
   transition: box-shadow 0.1s ease-in-out;
   box-shadow: 0 0 5px cornflowerblue inset;
   outline: none;
+}
+
+input,
+select {
+  height: 3rem;
+}
+
+@media (min-width: 770px) {
+  input,
+  select {
+    height: 4rem;
+  }
 }
 
 input[type="checkbox"],
@@ -1363,6 +1375,10 @@ div.gallery {
 .menu-primary a:hover {
   color: cornflowerblue;
   text-decoration: none;
+}
+
+.menu-item-important a {
+  color: goldenrod;
 }
 
 /* # Content Area
@@ -2107,8 +2123,14 @@ body div.wpcf7 img.ajax-loader {
 }
 
 body div.wpcf7 div.wpcf7-response-output {
-  padding: 0.75rem;
+  padding: 2rem;
   margin: 2rem 0 0;
+}
+
+body div.wpcf7 div.wpcf7-mail-sent-ok {
+  border: none;
+  background: forestgreen;
+  color: white;
 }
 
 body div.wpcf7 p:last-of-type {
@@ -2117,7 +2139,8 @@ body div.wpcf7 p:last-of-type {
 
 body div.wpcf7 input[type="text"],
 body div.wpcf7 input[type="email"],
-body div.wpcf7 textarea {
+body div.wpcf7 textarea,
+body div.wpcf7 select {
   margin-top: 1rem;
 }
 

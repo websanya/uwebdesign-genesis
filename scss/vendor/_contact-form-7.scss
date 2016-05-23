@@ -8,15 +8,21 @@ body div.wpcf7 {
 		margin-left: 1rem;
 	}
 	div.wpcf7-response-output {
-		padding: $padding-inner-tiny;
+		padding: $padding-inner-small;
 		margin: $margin-small 0 0;
+	}
+	div.wpcf7-mail-sent-ok {
+		border: none;
+		background: uwd-color('green');
+		color: uwd-color('white');
 	}
 	p:last-of-type {
 		margin-bottom: 0;
 	}
 	input[type="text"],
 	input[type="email"],
-	textarea {
+	textarea,
+	select {
 		margin-top: $margin-tiny;
 	}
 }
