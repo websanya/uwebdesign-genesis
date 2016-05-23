@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.0.5
+* Removed debug grid.
+
 ### 1.0.4
 * Added theme screenshot.
 

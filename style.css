@@ -5,7 +5,7 @@
  * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru/
- * Version: 1.0.4
+ * Version: 1.0.5
  * Template: genesis
  * Template Version: 2.2.2
  * GitHub Theme URI: https://github.com/websanya/uwebdesign-genesis
@@ -794,64 +794,6 @@ th {
   clear: both;
   content: "";
   display: table;
-}
-
-head {
-  display: block;
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  z-index: 999;
-  color: #333;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-head:before {
-  content: "|||";
-  display: block;
-  padding: 5px 10px;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-head:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: red;
-}
-
-head:hover ~ .site-inner,
-head:hover ~ body .site-inner, head:hover ~
-.wrap,
-head:hover ~ body
-.wrap, head:hover ~
-.footer-widgets,
-head:hover ~ body
-.footer-widgets {
-  position: relative;
-}
-
-head:hover ~ .site-inner:before,
-head:hover ~ body .site-inner:before, head:hover ~
-.wrap:before,
-head:hover ~ body
-.wrap:before, head:hover ~
-.footer-widgets:before,
-head:hover ~ body
-.footer-widgets:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: " ";
-  z-index: 998;
-  background-image: -webkit-linear-gradient( left , rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 66.6666666667%, transparent 66.6666666667%), -webkit-linear-gradient( top , #000 1px, transparent 1px);
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 66.6666666667%, transparent 66.6666666667%), linear-gradient(to bottom, #000 1px, transparent 1px);
-  background-size: 8.5714285714%, 100% 1rem;
-  background-origin: content-box, border-box;
-  background-clip: content-box, border-box;
-  background-position: left top;
 }
 
 .site-inner {
@@ -1750,28 +1692,6 @@ body.single-weeklies .entry-header .entry-title {
   clear: both;
   content: "";
   display: table;
-}
-
-head:hover ~ .entry-content-weekly-container,
-head:hover ~ body .entry-content-weekly-container {
-  position: relative;
-}
-
-head:hover ~ .entry-content-weekly-container:before,
-head:hover ~ body .entry-content-weekly-container:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: " ";
-  z-index: 998;
-  background-image: -webkit-linear-gradient( left , rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 66.6666666667%, transparent 66.6666666667%), -webkit-linear-gradient( top , #000 1px, transparent 1px);
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 66.6666666667%, transparent 66.6666666667%), linear-gradient(to bottom, #000 1px, transparent 1px);
-  background-size: 8.5714285714%, 100% 1rem;
-  background-origin: content-box, border-box;
-  background-clip: content-box, border-box;
-  background-position: left top;
 }
 
 .entry-content-weekly-item {
