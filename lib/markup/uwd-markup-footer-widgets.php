@@ -16,6 +16,12 @@ function uwd_footer_widgets_markup() {
 			</ul>
 		</div>
 		<div class="footer-widgets-widget">
+			<a href="<?php echo home_url( 'donate' ); ?>">
+				<img class="donate-banner" src="<?php echo get_stylesheet_directory_uri(); ?>/img/doshik.jpg"
+				     alt="Пожертвуй на развитие проекта">
+			</a>
+		</div>
+		<div class="footer-widgets-widget">
 			<h5>Наш подкаст</h5>
 			<div class="pp-ssb-widget pp-ssb-widget-modern">
 				<a
@@ -36,12 +42,6 @@ function uwd_footer_widgets_markup() {
 					в RSS
 				</a>
 			</div>
-		</div>
-		<div class="footer-widgets-widget">
-			<a href="<?php echo home_url( 'donate' ); ?>">
-				<img class="donate-banner" src="<?php echo get_stylesheet_directory_uri(); ?>/img/doshik.jpg"
-				     alt="Пожертвуй на развитие проекта">
-			</a>
 		</div>
 	</aside>
 	<?php
