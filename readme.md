@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.0.4
+* Added theme screenshot.
+
 ### 1.0.3
 * Added `readme.md`.
 * Changed footer widgets placement.
