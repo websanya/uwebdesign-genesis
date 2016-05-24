@@ -190,6 +190,7 @@
 	display: inline-block;
 	background: uwd-color('blue');
 	color: uwd-color('white');
+	margin-bottom: $margin-small;
 	&:hover {
 		background: uwd-color('black');
 		text-decoration: none;

@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.1.1
+* Fixed direct-link margin.
+
 ### 1.1.0
 * Another crapload of fixes.
 
