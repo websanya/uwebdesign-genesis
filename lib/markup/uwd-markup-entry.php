@@ -86,6 +86,11 @@ require_once( 'entry/uwd-markup-entry-weekly.php' );
 //* Connect Ya Share.
 add_action( 'genesis_entry_content', 'uwd_entry_ya_share', 20 );
 function uwd_entry_ya_share() {
+
+	if ( ! is_single() ) {
+		return;
+	}
+
 	?>
 	<div id="share-<?php echo get_the_ID(); ?>"></div>
 	<?php

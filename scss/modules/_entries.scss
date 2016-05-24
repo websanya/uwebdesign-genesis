@@ -81,7 +81,7 @@
 }
 
 .entry-image {
-	margin: auto;
+	margin: $margin-micro auto;
 	object-fit: cover;
 	max-height: 15rem;
 	@include breakpoint($stan) {
@@ -207,18 +207,18 @@
 	}
 	.dashicons {
 		position: absolute;
-		width: 10rem;
-		height: 10rem;
+		width: 4rem;
+		height: 4rem;
 		background: rgba(uwd-color('gray'), 0.3);
 		border-radius: 50%;
-		bottom: - $padding-inner-small;
-		right: $padding-inner-x-small;
+		bottom: 0;
+		right: $padding-inner-large;
 		&:before {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			@include transform(translateX(-50%) translateY(-50%));
-			font-size: 5rem;
+			font-size: 2rem;
 		}
 		&.dashicons-video-alt {
 			color: uwd-color('red');

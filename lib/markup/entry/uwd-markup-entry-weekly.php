@@ -39,7 +39,7 @@ function uwd_entry_weekly_remove_content() {
 }
 
 //* Add icon markup for Weekly post type.
-add_action( 'genesis_entry_content', 'uwd_entry_weekly_type_icon' );
+//add_action( 'genesis_entry_content', 'uwd_entry_weekly_type_icon' );
 function uwd_entry_weekly_type_icon() {
 	if ( get_post_type() != 'weeklies' ) {
 		return;

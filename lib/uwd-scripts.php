@@ -19,7 +19,7 @@ function uwd_dashicons() {
 }
 
 //* Include advanced Typekit.
-add_action( 'genesis_before', 'uwd_typekit_markup' );
+//add_action( 'genesis_before', 'uwd_typekit_markup' );
 function uwd_typekit_markup() {
 	?>
 	<script>

@@ -4,13 +4,16 @@
 
 ## Описание
 
-По какой-то причине решил разместить эту тему здесь на GitHub, а не на BitBucket, как привык. С удовольствием выслушаб комментарии по коду.
+По какой-то причине решил разместить эту тему здесь на GitHub, а не на BitBucket, как привык. С удовольствием выслушаю комментарии по коду.
 
 ## Обновления
 
 Эта тема поддерживается плагином [GitHub Updater](https://github.com/afragen/github-updater), если вы его установите, то `websanya/uwebdesign-genesis` будет обновляться через него.
 
 ## История изменений
+
+### 1.1.0
+* Another crapload of fixes.
 
 ### 1.0.6
 * Small CSS fixes.
@@ -30,10 +33,10 @@
 * Shitload of fixes.
 
 ### 1.0.1
-* Lots of CSS fixes.
+* Lots of CSS text.
 
 ### 1.0.0
-* Initial Release
+* Initial Release.
 
 ## Credits
 
