@@ -91,3 +91,8 @@ add_filter( 'genesis_next_link_text', 'uwd_next_link' );
 function uwd_next_link() {
 	return 'Следующие &#x000BB;';
 }
+
+//* Translate author page title.
+add_filter( 'genesis_author_box_title', function() {
+	return 'Автор: ' . get_the_author();
+});

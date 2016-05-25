@@ -33,6 +33,12 @@
 	}
 }
 
+.current-menu-item {
+	a {
+		color: uwd-color('blue');
+	}
+}
+
 .menu-item-important {
 	a {
 		color: uwd-color('yellow');

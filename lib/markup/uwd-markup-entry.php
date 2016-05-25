@@ -89,29 +89,8 @@ function uwd_entry_ya_share() {
 
 	if ( ! is_single() ) {
 		return;
+	} else {
+		echo '<div id="share-' . get_the_ID() . '"></div>';
 	}
 
-	?>
-	<div id="share-<?php echo get_the_ID(); ?>"></div>
-	<?php
-	//* Cache featured image src.
-	$entry_image_id  = get_post_thumbnail_id();
-	$entry_image_src = wp_get_attachment_image_src( $entry_image_id, 'uwd-custom-medium' )[0];
-	?>
-	<script>
-		var share = Ya.share2( 'share-<?php echo get_the_ID(); ?>', {
-			//* Get all the content related to post.
-			content: {
-				url: '<?php the_permalink(); ?>',
-				title: '<?php the_title(); ?>',
-				description: '<?php echo get_the_excerpt(); ?>',
-				image: '<?php echo $entry_image_src; ?>'
-			},
-			theme: {
-				services: 'vkontakte,twitter,facebook,gplus',
-				counter: true
-			}
-		} );
-	</script>
-	<?php
 }

@@ -6,7 +6,7 @@ require_once( get_template_directory() . '/lib/init.php' );
 //* Child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'uWebDesign Theme' );
 define( 'CHILD_THEME_URL', 'https://uwebdesign.ru/' );
-define( 'CHILD_THEME_VERSION', '1.0.0' );
+define( 'CHILD_THEME_VERSION', '1.1.2' );
 
 //* Check anything.
 add_action( 'genesis_before_header', 'custom_shit' );

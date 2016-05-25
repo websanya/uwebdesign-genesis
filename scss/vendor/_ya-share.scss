@@ -13,6 +13,15 @@
 		background-size: 3rem 3rem;
 	}
 
+	.ya-share2__container_size_m .ya-share2__counter {
+		font-size: $font-size-tiny;
+		line-height: $line-height-micro;
+		padding: $padding-inner-x-small;
+		&:before {
+			margin-left: - $margin-tiny;
+		}
+	}
+
 	.ya-share2__badge {
 		border-radius: 0;
 	}
