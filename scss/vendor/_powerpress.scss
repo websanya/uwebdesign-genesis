@@ -2,18 +2,23 @@
 --------------------------------------------- */
 
 body .pp-ssb-widget a.pp-ssb-btn {
-	width: 100%;
-	height: 4rem;
 	padding: 0;
+	display: block;
+	overflow: hidden;
+	margin: 0 auto $margin-small;
+	width: 27rem;
+	height: 4rem;
 	color: uwd-color('white');
-	display: inline-block;
-	margin: 0 0 $margin-tiny;
 	text-decoration: none;
 	text-align:left;
 	vertical-align: middle;
-	overflow: hidden;
 	&:last-of-type {
 		margin-bottom: 0;
+	}
+	@include breakpoint($kyle) {
+		display: inline-block;
+		margin: 0 0 $margin-tiny;
+		width: 100%;
 	}
 }
 

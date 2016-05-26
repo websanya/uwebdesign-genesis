@@ -28,6 +28,4 @@ remove_theme_support( 'genesis-inpost-layouts' );
 remove_theme_support( 'genesis-archive-layouts' );
 
 //* Register image sizes.
-add_image_size( 'uwd-banner-header', 770, 140, true );
-add_image_size( 'uwd-banner-sidebar', 770, 770, true );
-add_image_size( 'uwd-custom-medium', 300, 169, true );
+add_image_size( 'uwd-custom-medium', 300, 182, true );

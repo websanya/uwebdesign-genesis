@@ -4,16 +4,24 @@
 .nav-primary {
 	background: rgba(uwd-color('gray'), 0.6);
 	.menu-primary {
-		background: uwd-color('black');
+		background-color: uwd-color('black');
+		background-image: linear-gradient(black, black), radial-gradient(white, transparent),
+		linear-gradient(black, black), radial-gradient(white, transparent);
+		background-size: 20px 100%, 40px 100%, 20px 100%, 40px 100%;
+		background-position: 0 0, -7% 0, 100% 0, 107% 0;
+		background-repeat: no-repeat;
+		background-attachment: local, scroll, local, scroll;
 	}
 }
 
 .menu-primary {
+	position: relative;
 	white-space: nowrap;
 	overflow-x: scroll;
 	overflow-y: hidden;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
+	line-height: $line-height-tiny;
 	@include breakpoint($kyle) {
 		overflow: visible;
 	}
@@ -26,11 +34,32 @@
 		display: block;
 		float: left;
 		padding: 1.5rem 1rem;
+		text-decoration: none;
 		&:hover {
 			color: uwd-color('blue');
 			text-decoration: none;
 		}
 	}
+
+	//background: /* Shadow covers */
+	//		linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+	//		linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+	//			/* Shadows */
+	//		radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+	//		radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+	//background: /* Shadow covers */
+	//		linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+	//		linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+	//			/* Shadows */
+	//		radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+	//		radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+	//background-repeat: no-repeat;
+	//background-color: white;
+	//background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+	//
+	///* Opera doesn't support this in the shorthand */
+	//background-attachment: local, local, scroll, scroll;
+
 }
 
 .current-menu-item {

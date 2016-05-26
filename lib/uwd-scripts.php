@@ -25,7 +25,7 @@ function uwd_scripts() {
 					image: '$entry_image_src'
 				},
 				theme: {
-					services: 'vkontakte,twitter,facebook,gplus',
+					services: 'twitter,vkontakte,facebook,gplus',
 					counter: true
 				}
 			} );";

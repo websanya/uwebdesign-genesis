@@ -13,6 +13,7 @@ html {
 	@include breakpoint($kyle) {
 		font-size: 68.75%; /* 11px browser default */
 	}
+	font-family: -apple-system, sans-serif;
 }
 
 body {
@@ -20,7 +21,10 @@ body {
 	color: uwd-color('black');
 	font-size: $font-size-p;
 	font-weight: 300;
-	line-height: $line-height-tiny;
+	line-height: $line-height-compromiss;
+	@include breakpoint($kyle) {
+		line-height: $line-height-tiny;
+	}
 	*, *:before, *:after {
 		line-height: inherit;
 	}
@@ -46,14 +50,16 @@ textarea:focus,
 a {
 	color: uwd-color('blue');
 	font-weight: 400;
-	text-decoration: none;
+	text-decoration: underline;
 	&:hover,
 	&:focus {
-		//color: uwd-color('black');
-		text-decoration: underline;
+		color: uwd-color('red');
 	}
 	&:visited {
 		color: uwd-color('purple');
+		&:hover {
+			color: uwd-color('red');
+		}
 	}
 }
 
@@ -64,7 +70,7 @@ dl {
 	margin: 0;
 	padding: 0;
 	&:not(:last-child) {
-		margin-bottom: $margin-small;
+		margin-bottom: $margin-tiny;
 	}
 }
 
@@ -148,7 +154,7 @@ tt {
 }
 
 pre {
-	margin: 0 0 $margin-small;
+	margin: $margin-small 0;
 	padding: $padding-inner-x-small 1.5 * $padding-inner-x-small;
 	background-color: uwd-color('gray-dark');
 	color: uwd-color('white');
@@ -212,6 +218,7 @@ img,
 object,
 video,
 .wp-caption {
+	margin: $margin-small 0;
 	display: block;
 	max-width: 100%;
 }
@@ -245,7 +252,7 @@ textarea {
 
 input,
 select {
-	height: 3rem;
+	height: auto;
 	@include breakpoint($kyle) {
 		height: 4rem;
 	}
@@ -271,9 +278,9 @@ input[type="submit"],
 	border: 0;
 	color: uwd-color('white');
 	cursor: pointer;
-	font-size: $font-size-h5;
+	//font-size: $font-size-h5;
 	font-weight: 400;
-	padding: $padding-inner-x-small $padding-inner-small;
+	padding: $padding-inner-x-small $padding-inner-m-small;
 	width: auto;
 }
 

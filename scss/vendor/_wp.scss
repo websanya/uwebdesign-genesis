@@ -27,8 +27,8 @@
 --------------------------------------------- */
 
 .breadcrumb {
-	margin-top: $margin-tiny;
-	margin-bottom: $margin-tiny;
+	margin-top: $margin-small;
+	margin-bottom: $margin-small;
 	padding: 0 $padding-inner-small;
 	@include breakpoint($kyle) {
 		padding: 0 $padding-inner-large;
@@ -40,8 +40,8 @@
 .archive-description,
 .author-box {
 	position: relative;
-	padding: 0 $padding-inner-small;
-	margin-bottom: $margin-tiny;
+	padding: $padding-inner-small;
+	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
 		padding: $padding-inner-large;
 		margin-bottom: $margin-large;

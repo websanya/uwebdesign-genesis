@@ -14,7 +14,7 @@ function uwd_entry_weekly_markup() {
 			?>
 			<div class="entry-content-weekly-item">
 				<img class="entry-content-weekly-item-image" width="300" height="300"
-				     src="<?php echo $weekly_item['image']['sizes']['medium']; ?>"
+				     src="<?php echo $weekly_item['image']['sizes']['uwd-custom-medium']; ?>"
 				     alt="<?php echo $weekly_item['title']; ?>">
 				<h2 class="entry-content-weekly-item-title">
 					<?php echo $weekly_item['title']; ?>

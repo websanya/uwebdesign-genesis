@@ -17,7 +17,7 @@ function uwd_footer_widgets_markup() {
 		</div>
 		<div class="footer-widgets-widget">
 			<a href="<?php echo home_url( 'donate' ); ?>">
-				<img class="donate-banner" src="<?php echo get_stylesheet_directory_uri(); ?>/img/doshik.jpg"
+				<img class="donate-banner" src="<?php echo get_stylesheet_directory_uri(); ?>/img/donate.jpg"
 				     alt="Пожертвуй на развитие проекта">
 			</a>
 		</div>

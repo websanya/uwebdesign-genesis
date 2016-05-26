@@ -24,6 +24,12 @@
 	a:focus {
 		color: uwd-color('black');
 	}
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .site-description {

@@ -22,12 +22,12 @@
 }
 
 .archive-pagination li a {
+	display: inline-block;
+	padding: $padding-inner-x-small $padding-inner-m-small;
+	text-decoration: none;
 	background: uwd-color('black');
 	color: uwd-color('white');
 	cursor: pointer;
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	text-decoration: none;
 }
 
 .archive-pagination li a:hover,

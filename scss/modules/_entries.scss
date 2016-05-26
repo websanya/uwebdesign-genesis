@@ -13,11 +13,15 @@
 --------------------------------------------- */
 
 .entry-header {
+	padding-top: $padding-inner-small;
 	position: relative;
 	@include clearfix();
 	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
 		margin-bottom: $margin-large;
+	}
+	@include breakpoint($cartman) {
+		padding-top: 0;
 	}
 	background: rgba(uwd-color('gray'), 0.3);
 	&::before {
@@ -52,17 +56,17 @@
 .entry-header-inner {
 	padding: $padding-inner-small;
 	@include breakpoint($stan) {
+		text-align: center;
+	}
+	@include breakpoint($cartman) {
 		position: absolute;
 		width: 60%;
 		top: 50%;
 		@include transform(translateY(-50%));
-		text-align: center;
-	}
-	@include breakpoint($kyle) {
 		padding: $padding-inner-large;
 	}
 	.entry-title {
-		margin-bottom: 0;
+		margin-bottom: $margin-tiny;
 		font-size: $font-size-h3;
 		line-height: $line-height-small;
 		@include breakpoint($kyle) {
@@ -74,19 +78,20 @@
 	}
 	a {
 		color: uwd-color('black');
+		text-decoration: none;
 		&:hover {
 			color: uwd-color('black');
+			text-decoration: underline;
 		}
 	}
 }
 
 .entry-image {
 	margin: $margin-micro auto;
-	object-fit: cover;
 	max-height: 15rem;
-	@include breakpoint($stan) {
+	@include breakpoint($cartman) {
 		margin: $margin-micro;
-		width: 40%;
+		max-width: 40%;
 		max-height: none;
 		height: 20rem;
 		float: right;
@@ -123,7 +128,8 @@
 		}
 	}
 	h2, h3, h4, h5, h6 {
-		margin-bottom: $margin-small;
+		margin-top: $margin-small;
+		margin-bottom: $margin-tiny;
 	}
 	ol,
 	ul {
@@ -172,10 +178,12 @@
 --------------------------------------------- */
 
 .more-link {
-	padding: $padding-inner-x-small;
+	margin-top: $margin-small;
+	padding: $padding-inner-x-small $padding-inner-m-small;
 	display: inline-block;
 	background: uwd-color('black');
 	color: uwd-color('white');
+	text-decoration: none;
 	&:hover {
 		background: uwd-color('blue');
 		text-decoration: none;
@@ -183,6 +191,9 @@
 	}
 	&:visited {
 		color: uwd-color('white');
+		&:hover {
+			color: uwd-color('white');
+		}
 	}
 }
 
@@ -190,11 +201,13 @@
 --------------------------------------------- */
 
 .direct-link {
-	padding: $padding-inner-x-small;
+	margin-top: $margin-small;
+	padding: $padding-inner-x-small $padding-inner-m-small;
 	display: inline-block;
 	background: uwd-color('blue');
 	color: uwd-color('white');
 	margin-bottom: $margin-small;
+	text-decoration: none;
 	&:hover {
 		background: uwd-color('black');
 		text-decoration: none;
@@ -205,6 +218,7 @@
 		color: uwd-color('white');
 		&:hover {
 			background: uwd-color('black');
+			color: uwd-color('white');
 		}
 	}
 }
@@ -212,40 +226,40 @@
 /* ## Entry Format Link
 --------------------------------------------- */
 
-.entry-content-icon {
-	margin: 0;
-	.format-link & {
-		margin-bottom: $margin-small;
-	}
-	.dashicons {
-		position: absolute;
-		width: 4rem;
-		height: 4rem;
-		background: rgba(uwd-color('gray'), 0.3);
-		border-radius: 50%;
-		bottom: 0;
-		right: $padding-inner-large;
-		&:before {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			@include transform(translateX(-50%) translateY(-50%));
-			font-size: 2rem;
-		}
-		&.dashicons-video-alt {
-			color: uwd-color('red');
-		}
-		&.dashicons-admin-links {
-			color: uwd-color('blue');
-		}
-		&.dashicons-admin-post {
-			color: uwd-color('black');
-		}
-		&.dashicons-calendar {
-			color: uwd-color('yellow');
-		}
-	}
-}
+//.entry-content-icon {
+//	margin: 0;
+//	.format-link & {
+//		margin-bottom: $margin-small;
+//	}
+//	.dashicons {
+//		position: absolute;
+//		width: 4rem;
+//		height: 4rem;
+//		background: rgba(uwd-color('gray'), 0.3);
+//		border-radius: 50%;
+//		bottom: 0;
+//		right: $padding-inner-large;
+//		&:before {
+//			position: absolute;
+//			top: 50%;
+//			left: 50%;
+//			@include transform(translateX(-50%) translateY(-50%));
+//			font-size: 2rem;
+//		}
+//		&.dashicons-video-alt {
+//			color: uwd-color('red');
+//		}
+//		&.dashicons-admin-links {
+//			color: uwd-color('blue');
+//		}
+//		&.dashicons-admin-post {
+//			color: uwd-color('black');
+//		}
+//		&.dashicons-calendar {
+//			color: uwd-color('yellow');
+//		}
+//	}
+//}
 
 /* ## Entry Type Video
 --------------------------------------------- */
@@ -264,6 +278,7 @@
 	height: 0;
 	padding-bottom: 52%;
 	iframe {
+		margin: 0;
 		position: absolute;
 		width: calc(100% - 4rem);
 		height: 100%;
@@ -299,11 +314,6 @@
 
 .entry-content-weekly-item-image {
 	margin-bottom: $margin-tiny;
-	object-fit: cover;
-	max-height: 15rem;
-	@include breakpoint($kyle) {
-		max-height: 12rem;
-	}
 }
 
 h2.entry-content-weekly-item-title {
@@ -342,12 +352,18 @@ h2.entry-content-weekly-item-title {
 }
 
 .entry-inner-item {
+	padding-bottom: $padding-inner-small - 0.1rem;
+	border-bottom: 0.1rem solid rgba(uwd-color('gray-dark'), 0.3);
 	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
+		padding-bottom: 0;
 		margin-bottom: $margin-large;
+		border-bottom: none;
 	}
 	&:last-of-type {
+		padding-bottom: 0;
 		margin-bottom: 0;
+		border-bottom: none;
 	}
 }
 

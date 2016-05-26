@@ -12,6 +12,12 @@
 
 ## История изменений
 
+### 1.1.3
+* Another pack of performance issues.
+
+### 1.1.2
+* Performance issues.
+
 ### 1.1.1
 * Fixed direct-link margin.
 

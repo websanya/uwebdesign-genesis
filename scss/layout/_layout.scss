@@ -89,19 +89,22 @@ $susy: (
 	@include breakpoint($kyle) {
 		padding: 0 $padding-inner-large 0 0;
 		@include span(7 last);
+		@include clearfix();
 	}
 	@include breakpoint($cartman) {
 		padding: 0;
 	}
 	.header-banner-image {
-		object-fit: cover;
 		width: 100%;
 		max-width: 550px;
 		margin: auto;
 		@include breakpoint($kyle) {
-			max-width: 100%;
+			max-width: 660px;
+			width: 57.1428571429%;
 			margin: initial;
-			height: 11rem;
+			position: absolute;
+			top: 50%; right: 0;
+			@include transform(translateY(-50%));
 		}
 	}
 }
