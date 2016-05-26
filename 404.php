@@ -12,7 +12,7 @@ function genesis_404() {
 
 		<header class="entry-header">
 
-			<img width="622" height="415" class="post-image entry-image"
+			<img class="post-image entry-image"
 			     src="<?php echo get_stylesheet_directory_uri() . '/img/black_hole.jpg'; ?>"
 			     alt="404 image">
 

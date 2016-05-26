@@ -6,7 +6,7 @@ body .pp-ssb-widget a.pp-ssb-btn {
 	display: block;
 	overflow: hidden;
 	margin: 0 auto $margin-small;
-	width: 27rem;
+	//width: 27rem;
 	height: 4rem;
 	color: uwd-color('white');
 	text-decoration: none;
@@ -14,6 +14,9 @@ body .pp-ssb-widget a.pp-ssb-btn {
 	vertical-align: middle;
 	&:last-of-type {
 		margin-bottom: 0;
+	}
+	&:hover {
+		opacity: 0.8;
 	}
 	@include breakpoint($kyle) {
 		display: inline-block;

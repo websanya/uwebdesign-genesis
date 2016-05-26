@@ -2,8 +2,9 @@
 --------------------------------------------- */
 
 .site-footer {
-	background: rgba(uwd-color('gray'), 0.3);
+	background: uwd-color('gray-box');
 	text-align: center;
+	font-size: $font-size-tiny;
 }
 
 .site-footer p {

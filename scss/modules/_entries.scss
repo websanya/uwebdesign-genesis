@@ -6,7 +6,7 @@
 	@include breakpoint($kyle) {
 		margin-bottom: $margin-large;
 	}
-	background: rgba(uwd-color('gray'), 0.3);
+	background: uwd-color('gray-box');
 }
 
 /* ## Entry Header
@@ -23,7 +23,7 @@
 	@include breakpoint($cartman) {
 		padding-top: 0;
 	}
-	background: rgba(uwd-color('gray'), 0.3);
+	background: uwd-color('gray-box');
 	&::before {
 		content: '';
 		display: block;
@@ -47,8 +47,10 @@
 			text-align: center;
 		}
 		.entry-title {
-			font-size: $font-size-h1;
-			margin-bottom: $margin-tiny;
+			font-size: $font-size-h2;
+			@include breakpoint($stan) {
+				font-size: $font-size-h1;
+			}
 		}
 	}
 }
@@ -130,11 +132,14 @@
 	h2, h3, h4, h5, h6 {
 		margin-top: $margin-small;
 		margin-bottom: $margin-tiny;
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 	ol,
 	ul {
+		margin-top: $margin-tiny;
 		margin-bottom: $margin-small;
-		margin-left: $margin-small;
 	}
 	li {
 		margin-bottom: $margin-tiny;
@@ -151,7 +156,7 @@
 .entry-footer .entry-meta {
 	padding: $padding-inner-x-small $padding-inner-small;
 	position: relative;
-	background-color: rgba(uwd-color('gray'), 0.3);
+	background-color: uwd-color('gray-box');
 	font-size: $font-size-tiny;
 	@include breakpoint($kyle) {
 		padding: $padding-inner-x-small $padding-inner-large;
@@ -222,44 +227,6 @@
 		}
 	}
 }
-
-/* ## Entry Format Link
---------------------------------------------- */
-
-//.entry-content-icon {
-//	margin: 0;
-//	.format-link & {
-//		margin-bottom: $margin-small;
-//	}
-//	.dashicons {
-//		position: absolute;
-//		width: 4rem;
-//		height: 4rem;
-//		background: rgba(uwd-color('gray'), 0.3);
-//		border-radius: 50%;
-//		bottom: 0;
-//		right: $padding-inner-large;
-//		&:before {
-//			position: absolute;
-//			top: 50%;
-//			left: 50%;
-//			@include transform(translateX(-50%) translateY(-50%));
-//			font-size: 2rem;
-//		}
-//		&.dashicons-video-alt {
-//			color: uwd-color('red');
-//		}
-//		&.dashicons-admin-links {
-//			color: uwd-color('blue');
-//		}
-//		&.dashicons-admin-post {
-//			color: uwd-color('black');
-//		}
-//		&.dashicons-calendar {
-//			color: uwd-color('yellow');
-//		}
-//	}
-//}
 
 /* ## Entry Type Video
 --------------------------------------------- */
@@ -348,12 +315,12 @@ h2.entry-content-weekly-item-title {
 		margin-top: $margin-large;
 		margin-bottom: $margin-large;
 	}
-	background-color: rgba(uwd-color('gray'), 0.3);
+	background-color: uwd-color('gray-box');
 }
 
 .entry-inner-item {
-	padding-bottom: $padding-inner-small - 0.1rem;
-	border-bottom: 0.1rem solid rgba(uwd-color('gray-dark'), 0.3);
+	padding-bottom: $padding-inner-small - $border-tiny;
+	border-bottom: $border-tiny solid uwd-color('gray-box-dark');
 	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
 		padding-bottom: 0;
@@ -368,7 +335,14 @@ h2.entry-content-weekly-item-title {
 }
 
 .entry-inner-item-image {
-	float: left;
-	margin-right: $margin-small;
-	max-width: 200px;
+	margin: 0 auto $margin-small;
+	@include breakpoint($kyle) {
+		float: left;
+		max-width: 200px;
+		margin: 0 $margin-small 0 0;
+	}
+}
+
+h2.entry-inner-item-title {
+	margin-top: 0;
 }

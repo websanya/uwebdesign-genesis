@@ -233,10 +233,10 @@ img {
 input,
 select,
 textarea {
-	padding: $padding-inner-x-small;
+	border: $border-tiny solid uwd-color('gray-box-dark');
+	padding: $padding-inner-x-small - $border-tiny;
 	width: 100%;
 	font-weight: 300;
-	border: none;
 	outline: none;
 	background-color: uwd-color('white');
 	color: uwd-color('black');
@@ -278,7 +278,6 @@ input[type="submit"],
 	border: 0;
 	color: uwd-color('white');
 	cursor: pointer;
-	//font-size: $font-size-h5;
 	font-weight: 400;
 	padding: $padding-inner-x-small $padding-inner-m-small;
 	width: auto;

@@ -5,15 +5,12 @@
 .entry-comments,
 .entry-pings {
 	padding: $padding-inner-small;
-	margin-bottom: $margin-tiny;
+	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
 		padding: $padding-inner-large;
 		margin-bottom: $margin-large;
 	}
-	background: rgba(uwd-color('gray'), 0.3);
-	&:last-child {
-		margin-bottom: 0;
-	}
+	background: uwd-color('gray-box');
 }
 
 .comment-list-title {
@@ -21,8 +18,12 @@
 }
 
 li.comment {
-	background: rgba(uwd-color('gray'), 0.3);
+	background: uwd-color('gray-box');
 	margin-top: $margin-small;
+}
+
+p.comment-notes {
+	margin-bottom: $margin-small;
 }
 
 .comment-content {
@@ -69,9 +70,10 @@ li.comment {
 		margin-bottom: $margin-tiny;
 	}
 	.required {
-		color: uwd-color('blue');
+		color: uwd-color('red');
 	}
 	.form-submit {
+		margin-top: $margin-small;
 		margin-bottom: 0;
 	}
 }

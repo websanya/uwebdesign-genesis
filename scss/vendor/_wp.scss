@@ -46,7 +46,7 @@
 		padding: $padding-inner-large;
 		margin-bottom: $margin-large;
 	}
-	background-color: rgba(uwd-color('gray'), 0.3);
+	background-color: uwd-color('gray-box');
 	&::before {
 		content: '';
 		display: block;
@@ -123,6 +123,12 @@ a.alignright,
 img.alignright,
 .wp-caption.alignright {
 	margin: 0 0 $margin-small $margin-small;
+}
+
+.wp-caption {
+	img {
+		margin-bottom: 0;
+	}
 }
 
 .wp-caption-text {

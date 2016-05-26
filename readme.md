@@ -12,6 +12,12 @@
 
 ## История изменений
 
+### 1.1.5
+* Yet another crapload of fixes.
+
+### 1.1.4
+* Quick fix for featured images.
+
 ### 1.1.3
 * Another pack of performance issues.
 

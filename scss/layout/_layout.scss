@@ -131,7 +131,6 @@ $susy: (
 /* ### Content */
 
 .content {
-	margin-bottom: $margin-small;
 	@include span(12);
 	@include breakpoint($kyle) {
 		margin-bottom: 0;
@@ -182,7 +181,7 @@ $susy: (
 /* ### Footer Container */
 
 .site-footer {
-	padding: $padding-inner-small 0;
+	padding: $padding-inner-small $padding-inner-tiny;
 	@include breakpoint($kyle) {
 		padding: $padding-inner-large $padding-inner-small;
 	}
