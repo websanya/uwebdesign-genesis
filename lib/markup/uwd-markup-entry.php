@@ -26,7 +26,7 @@ function uwd_archive_do_post_image() {
 	if ( ! is_page() && ( ! is_single() || get_post_type() != 'videos' ) && ( ! is_single() || get_post_type() != 'weeklies' ) ) {
 		$img = genesis_get_image( array(
 			'format' => 'url',
-			'size'   => 'medium_large',
+			'size'   => 'medium',
 			'attr'   => genesis_parse_attr( 'entry-image', array() ),
 		) );
 
