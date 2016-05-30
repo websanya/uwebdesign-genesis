@@ -83,13 +83,13 @@ function uwd_search_title_text() {
 //* Translate previous link text.
 add_filter( 'genesis_prev_link_text', 'uwd_previous_link' );
 function uwd_previous_link() {
-	return '&#x000AB; Предыдущие';
+	return '&#x000AB; <span class="pagination-mobile">Пред.</span>';
 }
 
 //* Translate next link text.
 add_filter( 'genesis_next_link_text', 'uwd_next_link' );
 function uwd_next_link() {
-	return 'Следующие &#x000BB;';
+	return '<span class="pagination-mobile">След.</span> &#x000BB;';
 }
 
 //* Translate author page title.

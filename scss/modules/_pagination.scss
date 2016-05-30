@@ -3,6 +3,17 @@
 
 .pagination {
 	margin-bottom: $margin-small;
+	.pagination-mobile,
+	.pagination-omission {
+		display: none;
+		@include breakpoint($kyle) {
+			display: inline-block;
+		}
+	}
+}
+
+.pagination-omission {
+	padding: $padding-inner-tiny;
 }
 
 .adjacent-entry-pagination {
@@ -18,6 +29,9 @@
 		display: inline-block;
 		vertical-align: top;
 		margin-bottom: 0;
+		.active {
+			display: inline-block !important;
+		}
 	}
 }
 

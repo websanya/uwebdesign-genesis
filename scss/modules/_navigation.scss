@@ -5,12 +5,34 @@
 	background: uwd-color('gray-box-dark');
 	.menu-primary {
 		background-color: uwd-color('black');
-		background-image: linear-gradient(black, black), radial-gradient(white, transparent),
-		linear-gradient(black, black), radial-gradient(white, transparent);
-		background-size: 20px 100%, 40px 100%, 20px 100%, 40px 100%;
-		background-position: 0 0, -7% 0, 100% 0, 107% 0;
+		background-image: radial-gradient(white, transparent), radial-gradient(white, transparent);
+		background-size: 20px 100%, 20px 100%;
+		background-position: -5% 0, 105% 0;
 		background-repeat: no-repeat;
-		background-attachment: local, scroll, local, scroll;
+		li:first-child {
+			position: relative;
+			&:before {
+				background: black;
+				content: '';
+				display: inline-block;
+				position: absolute;
+				left: -10px;
+				width: 20px;
+				height: 100%;
+			}
+		}
+		li:last-child {
+			position: relative;
+			&:after {
+				background: black;
+				content: '';
+				display: inline-block;
+				position: absolute;
+				right: -10px;
+				width: 20px;
+				height: 100%;
+			}
+		}
 	}
 }
 
