@@ -1,18 +1,14 @@
 //* ### Color Declarations */
 
-$rose-quartz: #f7cac9;
-
-//* CSS Colors.
 $white: white;
 $black: black;
-$cornflowerblue: cornflowerblue;
-$whitesmoke: whitesmoke;
 $gainsboro: gainsboro;
+$whitesmoke: whitesmoke;
 $dimgray: dimgray;
-$firebrick: firebrick;
-$crimson: crimson;
+$blue: steelblue;
+$deepskyblue: deepskyblue;
 $goldenrod: goldenrod;
-$palevioletred: palevioletred;
+$crimson: crimson;
 $forestgreen: forestgreen;
 $purple: purple;
 
@@ -22,16 +18,15 @@ $colors: (
 		'white': $white,
 		'black': $black,
 		'gray': $gainsboro,
+		'gray-box': rgba($gainsboro, 0.4),
 		'gray-light': $whitesmoke,
 		'gray-dark' : $dimgray,
-		'blue': $cornflowerblue,
-		'pink': $palevioletred,
+		'blue': $blue,
+		'blue-light': $deepskyblue,
 		'yellow': $goldenrod,
 		'red': $crimson,
 		'green': $forestgreen,
 		'purple': $purple,
-		'gray-box': rgba($gainsboro, 0.5),
-		'gray-box-dark': rgba($dimgray, 0.5),
 );
 
 //* ### Color Function */

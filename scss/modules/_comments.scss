@@ -41,7 +41,7 @@ p.comment-notes {
 		list-style-position: inside;
 	}
 	li.comment {
-		padding: $padding-inner-small 0 $padding-inner-small $padding-inner-small;
+		padding: $padding-inner-small;
 		list-style: none;
 		&:target {
 			border: 5px solid uwd-color('yellow');

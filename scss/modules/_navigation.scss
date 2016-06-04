@@ -2,35 +2,34 @@
 --------------------------------------------- */
 
 .nav-primary {
-	background: uwd-color('gray-box-dark');
+	background: uwd-color('black');
 	.menu-primary {
-		background-color: uwd-color('black');
-		@media (max-width: $kyle) {
+		@media (max-width: $stan) {
 			background-image: radial-gradient(white, transparent), radial-gradient(white, transparent);
-			background-size: 10% 100%, 10% 100%;
+			background-size: 8% 100%, 8% 100%;
 			background-position: -5% 0, 105% 0;
 			background-repeat: no-repeat;
 			li:first-child {
 				position: relative;
 				&:before {
-					background: black;
+					background: uwd-color('black');
 					content: '';
 					display: inline-block;
 					position: absolute;
 					left: -10px;
-					width: 40px;
+					width: 20px;
 					height: 100%;
 				}
 			}
 			li:last-child {
 				position: relative;
 				&:after {
-					background: black;
+					background: uwd-color('black');
 					content: '';
 					display: inline-block;
 					position: absolute;
 					right: -30px;
-					width: 40px;
+					width: 20px;
 					height: 100%;
 				}
 			}
@@ -52,6 +51,15 @@
 	li {
 		display: inline-block;
 		margin: 0;
+		&:not(:last-of-type) {
+			&:after {
+				content: '•';
+				display: block;
+				float: right;
+				color: uwd-color('white');
+				padding: 1.5rem 0;
+			}
+		}
 	}
 	a {
 		color: uwd-color('white');
@@ -60,7 +68,7 @@
 		padding: 1.5rem 1rem;
 		text-decoration: none;
 		&:hover {
-			color: uwd-color('blue');
+			color: uwd-color('blue-light');
 			text-decoration: none;
 		}
 	}
@@ -68,7 +76,7 @@
 
 .current-menu-item {
 	a {
-		color: uwd-color('blue');
+		color: uwd-color('blue-light');
 	}
 }
 

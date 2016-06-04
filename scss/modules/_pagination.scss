@@ -3,6 +3,9 @@
 
 .pagination {
 	margin-bottom: $margin-small;
+	@include breakpoint($kyle) {
+		margin-bottom: 0;
+	}
 	.pagination-mobile,
 	.pagination-omission {
 		display: none;
@@ -39,8 +42,8 @@
 	display: inline-block;
 	padding: $padding-inner-x-small $padding-inner-m-small;
 	text-decoration: none;
-	background: uwd-color('black');
-	color: uwd-color('white');
+	background: uwd-color('gray-box');
+	color: uwd-color('black');
 	cursor: pointer;
 }
 

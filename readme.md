@@ -12,6 +12,18 @@
 
 ## История изменений
 
+### 1.1.9
+* Fixed whole lot of bugs.
+
+### 1.1.8
+* Removed mobile menu on desktop.
+
+### 1.1.7
+* Tweaked the gradient in the menu.
+
+### 1.1.6
+* Fixed another pack of mobile bugs (pagination & menu).
+
 ### 1.1.5
 * Yet another crapload of fixes.
 

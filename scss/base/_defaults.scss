@@ -233,7 +233,7 @@ img {
 input,
 select,
 textarea {
-	border: $border-tiny solid uwd-color('gray-box-dark');
+	border: $border-tiny solid uwd-color('gray');
 	padding: $padding-inner-x-small - $border-tiny;
 	width: 100%;
 	font-weight: 300;
@@ -245,7 +245,7 @@ textarea {
 	}
 	&:focus {
 		@include transition(box-shadow 0.1s ease-in-out);
-		box-shadow: 0 0 5px uwd-color('blue') inset;
+		box-shadow: 0 0 5px uwd-color('gray') inset;
 		outline: none;
 	}
 }

@@ -18,7 +18,7 @@ function uwd_custom_post_meta() {
 add_filter( 'get_the_content_more_link', 'uwd_custom_read_more_link' );
 add_filter( 'the_content_more_link', 'uwd_custom_read_more_link' );
 function uwd_custom_read_more_link() {
-	return '<a class="more-link" href="' . get_permalink() . '">Читать далее</a>';
+	return '<a class="more-link" href="' . get_permalink() . '">Читать далее &rarr;</a>';
 }
 
 //* Translate breadcrumbs.

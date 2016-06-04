@@ -34,6 +34,7 @@
 		right: 100%;
 		background-color: inherit;
 	}
+	@include transition(all, 0.5s ease-in-out);
 	body.page &,
 	body.single-videos &,
 	body.single-weeklies & {
@@ -184,22 +185,23 @@
 
 .more-link {
 	margin-top: $margin-small;
-	padding: $padding-inner-x-small $padding-inner-m-small;
+	//padding: $padding-inner-x-small $padding-inner-m-small;
 	display: inline-block;
-	background: uwd-color('black');
-	color: uwd-color('white');
+	//background: uwd-color('black');
+	//color: uwd-color('white');
+	//text-decoration: none;
+	//&:hover {
+	//	background: uwd-color('blue');
+	//	text-decoration: none;
+	//	color: uwd-color('white');
+	//}
+	//&:visited {
+	//	color: uwd-color('white');
+	//	&:hover {
+	//		color: uwd-color('white');
+	//	}
+	//}
 	text-decoration: none;
-	&:hover {
-		background: uwd-color('blue');
-		text-decoration: none;
-		color: uwd-color('white');
-	}
-	&:visited {
-		color: uwd-color('white');
-		&:hover {
-			color: uwd-color('white');
-		}
-	}
 }
 
 /* ## Format Link
@@ -207,25 +209,26 @@
 
 .direct-link {
 	margin-top: $margin-small;
-	padding: $padding-inner-x-small $padding-inner-m-small;
+	//padding: $padding-inner-x-small $padding-inner-m-small;
 	display: inline-block;
-	background: uwd-color('blue');
-	color: uwd-color('white');
-	margin-bottom: $margin-small;
+	//background: uwd-color('blue');
+	//color: uwd-color('white');
+	//margin-bottom: $margin-small;
+	//text-decoration: none;
+	//&:hover {
+	//	background: uwd-color('black');
+	//	text-decoration: none;
+	//	color: uwd-color('white');
+	//}
+	//&:visited {
+	//	background: uwd-color('purple');
+	//	color: uwd-color('white');
+	//	&:hover {
+	//		background: uwd-color('black');
+	//		color: uwd-color('white');
+	//	}
+	//}
 	text-decoration: none;
-	&:hover {
-		background: uwd-color('black');
-		text-decoration: none;
-		color: uwd-color('white');
-	}
-	&:visited {
-		background: uwd-color('purple');
-		color: uwd-color('white');
-		&:hover {
-			background: uwd-color('black');
-			color: uwd-color('white');
-		}
-	}
 }
 
 /* ## Entry Type Video
@@ -320,7 +323,7 @@ h2.entry-content-weekly-item-title {
 
 .entry-inner-item {
 	padding-bottom: $padding-inner-small - $border-tiny;
-	border-bottom: $border-tiny solid uwd-color('gray-box-dark');
+	border-bottom: $border-tiny solid uwd-color('gray-dark');
 	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
 		padding-bottom: 0;
