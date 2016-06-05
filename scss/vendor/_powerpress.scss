@@ -1,50 +1,36 @@
 /* ## Buttons.
 --------------------------------------------- */
 
-body .pp-ssb-widget a.pp-ssb-btn {
-	padding: 0;
-	display: block;
-	overflow: hidden;
-	margin: 0 auto $margin-small;
-	height: 4rem;
-	color: uwd-color('white');
-	text-decoration: none;
-	text-align:left;
-	vertical-align: middle;
-	&:last-of-type {
-		margin-bottom: 0;
-	}
-	&:hover {
-		opacity: 0.8;
-	}
-	@include breakpoint($kyle) {
-		display: inline-block;
-		margin: 0 0 $margin-tiny;
-		width: 100%;
+.pp-ssb-widget {
+	.pp-ssb-btn {
+		padding: 0;
+		margin: 0 auto $margin-small;
+		display: block;
+		overflow: hidden;
+		height: 4rem;
+		text-decoration: none;
+		color: uwd-color('white');
+		@include breakpoint($kyle) {
+			margin: 0 0 $margin-tiny;
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		&:hover {
+			opacity: 0.8;
+		}
+		&.pp-ssb-itunes {
+			background-color: uwd-color('blue');
+		}
+		&.pp-ssb-android {
+			background-color: uwd-color('green');
+		}
+		&.pp-ssb-rss {
+			background-color: uwd-color('yellow');
+		}
 	}
 }
 
-.pp-ssb-widget a:link,
-.pp-ssb-widget a:visited,
-.pp-ssb-widget a:active,
-.pp-ssb-widget a:hover,
-a.pp-ssb-btn:link,
-a.pp-ssb-btn:visited,
-a.pp-ssb-btn:active,
-a.pp-ssb-btn:hover {
-	text-decoration: none !important;
-	color: #FFFFFF !important;
-}
-
-.pp-ssb-widget-modern a.pp-ssb-itunes {
-	background-color: uwd-color('blue');
-}
-.pp-ssb-widget-modern a.pp-ssb-android {
-	background-color: uwd-color('green');
-}
-.pp-ssb-widget-modern a.pp-ssb-rss {
-	background-color: uwd-color('yellow');
-}
 .pp-ssb-ic {
 	margin-right: $margin-tiny;
 	width: 4rem;
@@ -55,19 +41,13 @@ a.pp-ssb-btn:hover {
 	background-image: url('img/spriteRetina.png');
 	background-repeat: no-repeat;
 	background-size: 294px;
-}
-.pp-ssb-itunes .pp-ssb-ic {
-	background-position: -49px 0;
-}
-.pp-ssb-rss .pp-ssb-ic {
-	background-position: 0 -49px;
-}
-.pp-ssb-email .pp-ssb-ic {
-	background-position: -196px -49px;
-}
-.pp-ssb-android .pp-ssb-ic {
-	background-position: -98px -98px;
-}
-.pp-ssb-more .pp-ssb-ic {
-	background-position: -49px -49px;
+	.pp-ssb-itunes & {
+		background-position: -49px 0;
+	}
+	.pp-ssb-rss & {
+		background-position: 0 -49px;
+	}
+	.pp-ssb-android & {
+		background-position: -98px -98px;
+	}
 }

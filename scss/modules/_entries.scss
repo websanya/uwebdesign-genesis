@@ -6,6 +6,9 @@
 	@include breakpoint($kyle) {
 		margin-bottom: $margin-large;
 	}
+	&:last-child {
+		margin-bottom: 0;
+	}
 	background: uwd-color('gray-box');
 }
 
@@ -13,9 +16,8 @@
 --------------------------------------------- */
 
 .entry-header {
-	padding-top: $padding-inner-small;
 	position: relative;
-	@include clearfix();
+	padding-top: $padding-inner-small;
 	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
 		margin-bottom: $margin-large;
@@ -23,6 +25,8 @@
 	@include breakpoint($cartman) {
 		padding-top: 0;
 	}
+	@include clearfix();
+	@include transition(all, 0.5s ease-in-out);
 	background: uwd-color('gray-box');
 	&::before {
 		content: '';
@@ -34,7 +38,6 @@
 		right: 100%;
 		background-color: inherit;
 	}
-	@include transition(all, 0.5s ease-in-out);
 	body.page &,
 	body.single-videos &,
 	body.single-weeklies & {
@@ -63,10 +66,10 @@
 	}
 	@include breakpoint($cartman) {
 		position: absolute;
+		padding: $padding-inner-large;
 		width: 60%;
 		top: 50%;
 		@include transform(translateY(-50%));
-		padding: $padding-inner-large;
 	}
 	.entry-title {
 		margin-bottom: $margin-tiny;
@@ -155,19 +158,19 @@
 --------------------------------------------- */
 
 .entry-footer .entry-meta {
-	padding: $padding-inner-x-small $padding-inner-small;
 	position: relative;
-	background-color: uwd-color('gray-box');
-	font-size: $font-size-tiny;
+	padding: $padding-inner-x-small $padding-inner-small;
 	@include breakpoint($kyle) {
 		padding: $padding-inner-x-small $padding-inner-large;
 	}
+	font-size: $font-size-tiny;
+	background-color: uwd-color('gray-box');
 	&:before {
 		content: '';
 		display: block;
 		position: absolute;
-		height: 100%;
 		width: 150rem;
+		height: 100%;
 		top: 0;
 		right: 100%;
 		background-color: inherit;
@@ -180,54 +183,13 @@
 	display: block;
 }
 
-/* ## More Link
+/* ## More Link & Format Link
 --------------------------------------------- */
 
-.more-link {
-	margin-top: $margin-small;
-	//padding: $padding-inner-x-small $padding-inner-m-small;
-	display: inline-block;
-	//background: uwd-color('black');
-	//color: uwd-color('white');
-	//text-decoration: none;
-	//&:hover {
-	//	background: uwd-color('blue');
-	//	text-decoration: none;
-	//	color: uwd-color('white');
-	//}
-	//&:visited {
-	//	color: uwd-color('white');
-	//	&:hover {
-	//		color: uwd-color('white');
-	//	}
-	//}
-	text-decoration: none;
-}
-
-/* ## Format Link
---------------------------------------------- */
-
+.more-link,
 .direct-link {
 	margin-top: $margin-small;
-	//padding: $padding-inner-x-small $padding-inner-m-small;
 	display: inline-block;
-	//background: uwd-color('blue');
-	//color: uwd-color('white');
-	//margin-bottom: $margin-small;
-	//text-decoration: none;
-	//&:hover {
-	//	background: uwd-color('black');
-	//	text-decoration: none;
-	//	color: uwd-color('white');
-	//}
-	//&:visited {
-	//	background: uwd-color('purple');
-	//	color: uwd-color('white');
-	//	&:hover {
-	//		background: uwd-color('black');
-	//		color: uwd-color('white');
-	//	}
-	//}
 	text-decoration: none;
 }
 
@@ -246,6 +208,7 @@
 	position: relative;
 	width: 100%;
 	height: 0;
+	//* Magic number for 16:9 aspect ratio.
 	padding-bottom: 52%;
 	iframe {
 		margin: 0;
@@ -282,14 +245,8 @@
 	}
 }
 
-.entry-content-weekly-item-image {
-	margin-bottom: $margin-tiny;
-}
-
-h2.entry-content-weekly-item-title {
-	margin-bottom: $margin-tiny;
-}
-
+.entry-content-weekly-item-image,
+h2.entry-content-weekly-item-title,
 .entry-content-weekly-item-content {
 	margin-bottom: $margin-tiny;
 }
@@ -323,8 +280,8 @@ h2.entry-content-weekly-item-title {
 
 .entry-inner-item {
 	padding-bottom: $padding-inner-small - $border-tiny;
-	border-bottom: $border-tiny solid uwd-color('gray-dark');
 	margin-bottom: $margin-small;
+	border-bottom: $border-tiny solid uwd-color('gray-dark');
 	@include breakpoint($kyle) {
 		padding-bottom: 0;
 		margin-bottom: $margin-large;

@@ -1,58 +1,77 @@
 /* ## Comments
 --------------------------------------------- */
 
-.comment-respond,
 .entry-comments,
-.entry-pings {
+.comment-respond {
 	padding: $padding-inner-small;
-	margin-bottom: $margin-small;
 	@include breakpoint($kyle) {
 		padding: $padding-inner-large;
-		margin-bottom: $margin-large;
+	}
+	&:not(:last-child) {
+		margin-bottom: $margin-small;
+		@include breakpoint($kyle) {
+			margin-bottom: $margin-large;
+		}
 	}
 	background: uwd-color('gray-box');
 }
+
+/* ### Entry Comments container */
 
 .comment-list-title {
 	font-size: $font-size-h3;
 }
 
-li.comment {
-	background: uwd-color('gray-box');
-	margin-top: $margin-small;
-}
-
-p.comment-notes {
-	margin-bottom: $margin-small;
-}
-
-.comment-content {
-	clear: both;
-	word-wrap: break-word;
-}
-
-.comment-reply {
-	margin-top: $margin-small;
-}
-
 .comment-list {
+	padding-left: 0;
 	li {
 		padding: $padding-inner-x-small 0 0 $padding-inner-x-small;
 		list-style-position: inside;
 	}
-	li.comment {
-		padding: $padding-inner-small;
-		list-style: none;
-		&:target {
-			border: 5px solid uwd-color('yellow');
+}
+
+li.comment {
+	padding: $padding-inner-small;
+	margin-top: $margin-small;
+	list-style: none;
+	background: uwd-color('gray-box');
+	&:target {
+		border: 5px solid uwd-color('yellow');
+	}
+	&.bypostauthor {
+		background: rgba(uwd-color('blue'), 0.1);
+	}
+	.comment-author {
+		margin-bottom: 0;
+	}
+	.avatar {
+		max-width: 4rem;
+		max-height: 4rem;
+		margin: 0 $margin-tiny $margin-tiny 0;
+	}
+	.comment-meta {
+		float: left;
+		margin-right: $margin-micro;
+	}
+	.comment-content {
+		margin-bottom: $margin-tiny;
+		clear: both;
+		word-wrap: break-word;
+		.alert {
+			font-size: $font-size-tiny;
+			color: uwd-color('red');
+		}
+		& > ul > li:first-child,
+		& > ol > li:first-child {
+			padding-top: 0;
 		}
 	}
-	.comment-content > ul > li:first-child {
-		padding-top: 0;
-	}
-	.comment-content > ol > li:first-child {
-		padding-top: 0;
-	}
+}
+
+/* ### Comment Respond container */
+
+.comment-notes {
+	margin-bottom: $margin-small;
 }
 
 .comment-respond {
@@ -69,23 +88,8 @@ p.comment-notes {
 		display: block;
 		margin-bottom: $margin-tiny;
 	}
-	.required {
-		color: uwd-color('red');
-	}
 	.form-submit {
 		margin-top: $margin-small;
 		margin-bottom: 0;
 	}
-}
-
-.entry-comments .comment-author {
-	margin-bottom: 0;
-}
-
-.entry-pings .reply {
-	display: none;
-}
-
-li.bypostauthor {
-	background: rgba(uwd-color('blue'), 0.1);
 }

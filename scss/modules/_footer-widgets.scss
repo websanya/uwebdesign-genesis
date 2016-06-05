@@ -9,9 +9,8 @@
 	background: uwd-color('gray-box');
 	ul {
 		li {
-			margin-bottom: $margin-tiny;
-			&:last-of-type {
-				margin-bottom: 0;
+			&:not(:last-of-type) {
+				margin-bottom: $margin-tiny;
 			}
 		}
 	}

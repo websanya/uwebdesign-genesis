@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.1.10
+* Refactored all the CSS.
+
 ### 1.1.9
 * Fixed whole lot of bugs.
 

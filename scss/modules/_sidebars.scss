@@ -13,8 +13,8 @@
 --------------------------------------------- */
 
 .widget {
-	margin-bottom: $margin-small;
 	padding: $padding-inner-small;
+	margin-bottom: $margin-small;
 	background: uwd-color('gray-box');
 	@include breakpoint($kyle) {
 		padding: $padding-inner-large;
@@ -28,14 +28,4 @@
 .widget-title {
 	font-size: $font-size-h4;
 	line-height: $line-height-compromiss;
-}
-
-/* ## UWD Banner Widget
---------------------------------------------- */
-
-.widget_uwd_banner_widget {
-	img {
-		margin: auto;
-		width: 27rem;
-	}
 }

@@ -1,6 +1,7 @@
 /* ## Primary Navigation
 --------------------------------------------- */
 
+//* A lot of magic numbers over here, actually. But it's for the gradients.
 .nav-primary {
 	background: uwd-color('black');
 	.menu-primary {
@@ -16,8 +17,8 @@
 					content: '';
 					display: inline-block;
 					position: absolute;
-					left: -10px;
-					width: 20px;
+					left: -1rem;
+					width: 2rem;
 					height: 100%;
 				}
 			}
@@ -28,8 +29,8 @@
 					content: '';
 					display: inline-block;
 					position: absolute;
-					right: -30px;
-					width: 20px;
+					right: -3rem;
+					width: 2rem;
 					height: 100%;
 				}
 			}
@@ -39,16 +40,16 @@
 
 .menu-primary {
 	position: relative;
+	line-height: $line-height-tiny;
 	white-space: nowrap;
 	overflow-x: scroll;
 	overflow-y: hidden;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
-	line-height: $line-height-tiny;
 	@include breakpoint($kyle) {
 		overflow: visible;
 	}
-	li {
+	li.menu-item {
 		display: inline-block;
 		margin: 0;
 		&:not(:last-of-type) {
@@ -56,20 +57,20 @@
 				content: '•';
 				display: block;
 				float: right;
-				color: uwd-color('white');
 				padding: 1.5rem 0;
+				color: uwd-color('white');
 			}
 		}
 	}
 	a {
-		color: uwd-color('white');
 		display: block;
 		float: left;
 		padding: 1.5rem 1rem;
 		text-decoration: none;
+		color: uwd-color('white');
 		&:hover {
-			color: uwd-color('blue-light');
 			text-decoration: none;
+			color: uwd-color('blue-light');
 		}
 	}
 }

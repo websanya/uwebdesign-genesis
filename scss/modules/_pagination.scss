@@ -27,29 +27,30 @@
 	ul {
 		@include clearfix();
 		text-align: center;
-	}
-	li {
-		display: inline-block;
-		vertical-align: top;
-		margin-bottom: 0;
-		.active {
-			display: inline-block !important;
+		li {
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 0;
+			.active {
+				display: inline-block !important;
+				a {
+					background: uwd-color('blue');
+					color: uwd-color('white');
+				}
+			}
+			a {
+				display: inline-block;
+				padding: $padding-inner-x-small $padding-inner-m-small;
+				text-decoration: none;
+				background: uwd-color('gray-box');
+				color: uwd-color('black');
+				cursor: pointer;
+				&:hover,
+				&:focus {
+					background: uwd-color('blue');
+					color: uwd-color('white');
+				}
+			}
 		}
 	}
-}
-
-.archive-pagination li a {
-	display: inline-block;
-	padding: $padding-inner-x-small $padding-inner-m-small;
-	text-decoration: none;
-	background: uwd-color('gray-box');
-	color: uwd-color('black');
-	cursor: pointer;
-}
-
-.archive-pagination li a:hover,
-.archive-pagination li a:focus,
-.archive-pagination .active a {
-	background: uwd-color('blue');
-	color: uwd-color('white');
 }

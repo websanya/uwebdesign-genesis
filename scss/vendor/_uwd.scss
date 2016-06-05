@@ -1,17 +1,27 @@
+/* ## UWD Banner Widget
+--------------------------------------------- */
+
+.widget_uwd_banner_widget {
+	img {
+		margin: auto;
+		width: 27rem;
+	}
+}
+
 /* ## Tweet this shortcode.
 --------------------------------------------- */
 
 a.tweet-this {
-	margin-bottom: $margin-small;
-	padding: $padding-inner-small;
-	display: block;
 	position: relative;
+	padding: $padding-inner-small;
+	margin-bottom: $margin-small;
+	display: block;
 	font-size: $font-size-h3;
 	text-align: center;
 	color: initial;
 	@include breakpoint($kyle) {
-		margin-bottom: $margin-large;
 		padding: $padding-inner-large;
+		margin-bottom: $margin-large;
 	}
 	&:hover {
 		text-decoration: none;
@@ -44,8 +54,8 @@ a.tweet-this {
 	font-size: $font-size-tiny;
 	.dashicons {
 		font-size: $font-size-p;
-		color: #55acee;
 		vertical-align: bottom;
+		color: #55acee;
 	}
 }
 
@@ -53,10 +63,10 @@ a.tweet-this {
 --------------------------------------------- */
 
 .shortcode-this {
-	margin: $margin-small 0;
-	padding: $padding-inner-small;
-	display: block;
 	position: relative;
+	padding: $padding-inner-small;
+	margin: $margin-small 0;
+	display: block;
 	font-size: $font-size-h4;
 	text-align: center;
 	color: initial;
@@ -69,21 +79,21 @@ a.tweet-this {
 		text-decoration: none;
 	}
 	&:before {
+		position: absolute;
 		content: "";
 		width: 60%;
 		display: block;
 		border-top: 1px solid uwd-color('black');
-		position: absolute;
 		top: 0;
 		left: 50%;
 		@include transform(translateX(-50%));
 	}
 	&:after {
+		position: absolute;
 		content: "";
 		width: 60%;
 		display: block;
 		border-top: 1px solid uwd-color('black');
-		position: absolute;
 		bottom: 0;
 		left: 50%;
 		@include transform(translateX(-50%));
@@ -91,10 +101,10 @@ a.tweet-this {
 }
 
 span.shortcode-this-icon {
-	display: block;
 	margin-top: $margin-tiny;
 	margin-left: auto;
 	margin-right: auto;
+	display: block;
 	font-size: $font-size-p;
 	vertical-align: bottom;
 }

@@ -20,8 +20,8 @@ body {
 	background-color: uwd-color('white');
 	color: uwd-color('black');
 	font-size: $font-size-p;
-	font-weight: 300;
 	line-height: $line-height-compromiss;
+	font-weight: $font-weight-light;
 	@include breakpoint($kyle) {
 		line-height: $line-height-tiny;
 	}
@@ -38,19 +38,14 @@ input[type="reset"],
 input[type="submit"],
 textarea:focus,
 .button {
-	text-decoration: none;
-	@include transition(color 0.1s ease-in-out, background 0.1s ease-in-out, opacity 0.3s ease-in-out);
+	@include transition(color 150ms ease-in-out, background 150ms ease-in-out);
 	-webkit-transform: translate3d(0, 0, 0);
-	&:before {
-		@include transition(color 0.1s ease-in-out, background 0.1s ease-in-out, opacity 0.3s ease-in-out);
-		-webkit-transform: translate3d(0, 0, 0);
-	}
 }
 
 a {
-	color: uwd-color('blue');
-	font-weight: 400;
+	font-weight: $font-weight-regular;
 	text-decoration: underline;
+	color: uwd-color('blue');
 	&:hover,
 	&:focus {
 		color: uwd-color('red');
@@ -79,9 +74,8 @@ ul {
 	list-style-position: inside;
 	padding-left: $padding-inner-tiny;
 	li {
-		margin-bottom: $margin-micro;
-		&:last-of-type {
-			margin-bottom: 0;
+		&:not(:last-of-type) {
+			margin-bottom: $margin-micro;
 		}
 	}
 }
@@ -112,7 +106,7 @@ hr {
 
 b,
 strong {
-	font-weight: 700;
+	font-weight: $font-weight-bold;
 }
 
 blockquote,
@@ -135,7 +129,7 @@ cite {
 		text-align: right;
 		margin-top: $margin-tiny;
 	}
-	font-weight: 700;
+	font-weight: $font-weight-bold;
 }
 
 address {
@@ -146,19 +140,19 @@ code,
 kbd,
 tt {
 	padding: $padding-inner-tiny / 3 $padding-inner-tiny;
-	background-color: uwd-color('gray-dark');
-	color: uwd-color('white');
 	font-size: $font-size-tiny;
 	line-height: $font-size-tiny; //* Hack for vertical rhythm;
 	vertical-align: middle;
+	background: uwd-color('gray-dark');
+	color: uwd-color('white');
 }
 
 pre {
 	margin: $margin-small 0;
 	padding: $padding-inner-x-small 1.5 * $padding-inner-x-small;
+	font-size: $font-size-tiny;
 	background-color: uwd-color('gray-dark');
 	color: uwd-color('white');
-	font-size: $font-size-tiny;
 }
 
 small,
@@ -179,7 +173,7 @@ h5,
 h6 {
 	margin-top: 0;
 	margin-bottom: $margin-small;
-	font-weight: 300;
+	font-weight: $font-weight-light;
 }
 
 h1 {
@@ -199,6 +193,7 @@ h3 {
 
 h4 {
 	font-size: $font-size-h4;
+	line-height: $line-height-compromiss;
 }
 
 h5 {
@@ -233,10 +228,10 @@ img {
 input,
 select,
 textarea {
-	border: $border-tiny solid uwd-color('gray');
 	padding: $padding-inner-x-small - $border-tiny;
 	width: 100%;
-	font-weight: 300;
+	font-weight: $font-weight-light;
+	border: $border-tiny solid uwd-color('gray');
 	outline: none;
 	background-color: uwd-color('white');
 	color: uwd-color('black');
@@ -244,8 +239,8 @@ textarea {
 		display: inline-block;
 	}
 	&:focus {
-		@include transition(box-shadow 0.1s ease-in-out);
-		box-shadow: 0 0 5px uwd-color('gray') inset;
+		@include transition(box-shadow 150ms ease-in-out);
+		box-shadow: 0 0 5px uwd-color('blue') inset;
 		outline: none;
 	}
 }
@@ -272,33 +267,26 @@ input[type="search"] {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"],
-.button {
-	background-color: uwd-color('black');
-	border: 0;
-	color: uwd-color('white');
-	cursor: pointer;
-	font-weight: 400;
+input[type="submit"] {
 	padding: $padding-inner-x-small $padding-inner-m-small;
 	width: auto;
+	font-weight: $font-weight-regular;
+	border: 0;
+	background-color: uwd-color('black');
+	color: uwd-color('white');
+	cursor: pointer;
 }
 
 button:hover,
 input:hover[type="button"],
 input:hover[type="reset"],
 input:hover[type="submit"],
-.button:hover,
 button:focus,
 input:focus[type="button"],
 input:focus[type="reset"],
-input:focus[type="submit"],
-.button:focus {
+input:focus[type="submit"] {
 	background-color: uwd-color('blue');
 	color: uwd-color('white');
-}
-
-.button {
-	display: inline-block;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -310,11 +298,11 @@ input[type="search"]::-webkit-search-results-button {
 --------------------------------------------- */
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	line-height: $line-height-tiny;
 	margin-bottom: $margin-small;
 	width: 100%;
+	line-height: $line-height-tiny;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 td,
@@ -322,16 +310,17 @@ th {
 	text-align: left;
 }
 
+//* Some magic numbers here, because calculation can sometimes go wrong.
 td {
-	border-top: 1px solid uwd-color('gray');
 	padding: 9px 0 10px 0;
+	border-top: 1px solid uwd-color('gray');
 	@include breakpoint($kyle) {
-		border-top: 1px solid uwd-color('gray');
 		padding: 10px 0 11px 0;
+		border-top: 1px solid uwd-color('gray');
 	}
 }
 
 th {
 	padding: $padding-inner-x-small 0;
-	font-weight: 400;
+	font-weight: $font-weight-regular;
 }

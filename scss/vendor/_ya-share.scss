@@ -2,30 +2,24 @@
 --------------------------------------------- */
 
 .ya-share2 {
-
 	margin-top: $margin-small;
-
 	ul {
 		margin: 0;
 	}
-
 	.ya-share2__container_size_m .ya-share2__icon {
-		height: 3rem;
 		width: 3rem;
+		height: 3rem;
 		background-size: 3rem 3rem;
 	}
-
 	.ya-share2__container_size_m .ya-share2__counter {
+		padding: $padding-inner-x-small;
 		font-size: $font-size-tiny;
 		line-height: $line-height-micro;
-		padding: $padding-inner-x-small;
 		&:before {
 			margin-left: - $margin-tiny;
 		}
 	}
-
 	.ya-share2__badge {
 		border-radius: 0;
 	}
-
 }

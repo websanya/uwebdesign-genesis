@@ -18,16 +18,14 @@
 .site-title {
 	font-size: $font-size-h1;
 	line-height: $line-height-large;
-	font-weight: 400;
-	a,
-	a:hover,
-	a:focus {
-		color: uwd-color('black');
-	}
+	font-weight: $font-weight-light;
 	a {
+		font-weight: $font-weight-light;
 		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
+		color: uwd-color('black');
+		&:hover,
+		&:focus {
+			color: uwd-color('red');
 		}
 	}
 }

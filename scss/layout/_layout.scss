@@ -13,13 +13,7 @@ $susy: (
 		column-width: 6rem,
 		gutter-position: after,
 		global-box-sizing: border-box,
-		last-flow: to,
-		//debug: (
-		//		image: show,
-		//		color: rgba(#66f, .25),
-		//		output: overlay,
-		//		toggle: top right,
-		//),
+		last-flow: from,
 		use-custom: (
 				background-image: true,
 				background-options: true,
@@ -73,9 +67,6 @@ $susy: (
 		padding: 2.5 * $padding-inner-x-small 0 2.5 * $padding-inner-x-small $padding-inner-large;
 		@include span(5);
 	}
-	@include breakpoint($cartman) {
-		//padding: 2.5 * $padding-inner-x-small 0;
-	}
 }
 
 /* ### Header Banner Container */
@@ -95,15 +86,16 @@ $susy: (
 		padding: 0;
 	}
 	.header-banner-image {
-		width: 100%;
-		max-width: 550px;
 		margin: auto;
+		width: 100%;
+		max-width: 55rem;
 		@include breakpoint($kyle) {
-			max-width: 660px;
-			width: 57.1428571429%;
 			margin: initial;
+			width: 57.1428571429%;
+			max-width: 60rem;
 			position: absolute;
-			top: 50%; right: 0;
+			top: 50%;
+			right: 0;
 			@include transform(translateY(-50%));
 		}
 	}
@@ -117,11 +109,11 @@ $susy: (
 .nav-primary {
 	.menu-primary {
 		padding: 0 $padding-inner-x-small;
+		@include span(12);
+		height: 5rem;
 		@include breakpoint($kyle) {
 			padding: 0 $padding-inner-small;
 		}
-		@include span(12);
-		height: 5rem;
 	}
 }
 
@@ -162,19 +154,18 @@ $susy: (
 }
 
 .footer-widgets-widget {
-	margin-bottom: $margin-small;
 	padding: $padding-inner-small;
+	&:not(:last-child) {
+		margin-bottom: $margin-small;
+	}
 	@include span(12);
 	@include breakpoint($kyle) {
-		margin-bottom: 0;
 		padding: $padding-inner-large;
+		margin-bottom: 0;
 		@include span(4);
 		&:last-child {
 			@include span(4 last);
 		}
-	}
-	&:last-child {
-		margin-bottom: 0;
 	}
 }
 

@@ -4,7 +4,7 @@
  * Description: Дочерняя тема для Genesis Framework, использующаяся на комьюнити сайте uWebDesign.
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru/
- * Version: 1.1.9
+ * Version: 1.1.10
  * Template: genesis
  * Template Version: 2.2.2
  * GitHub Theme URI: https://github.com/websanya/uwebdesign-genesis
@@ -98,7 +98,6 @@
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
 
-@import "scss/modules/content";
 @import "scss/modules/entries";
 @import "scss/modules/pagination";
 @import "scss/modules/comments";
@@ -113,11 +112,6 @@
 ---------------------------------------------------------------------------------------------------- */
 
 @import "scss/modules/footer";
-
-/* # Adobe Typekit
----------------------------------------------------------------------------------------------------- */
-
-@import "scss/vendor/typekit";
 
 /* # Contact Form 7
 ---------------------------------------------------------------------------------------------------- */

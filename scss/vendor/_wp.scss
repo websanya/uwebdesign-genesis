@@ -9,6 +9,7 @@
 .author-box .avatar {
 	max-width: 5rem;
 	max-height: 5rem;
+	margin-top: 0;
 	margin-right: $margin-small;
 	margin-bottom: $margin-small;
 }
@@ -17,19 +18,12 @@
 	margin-left: $margin-small;
 }
 
-.comment .avatar {
-	max-width: 4rem;
-	max-height: 4rem;
-	margin: 0 $margin-tiny $margin-small 0;
-}
-
 /* ## Genesis
 --------------------------------------------- */
 
 .breadcrumb {
-	margin-top: $margin-small;
-	margin-bottom: $margin-small;
 	padding: 0 $padding-inner-small;
+	margin: $margin-small 0;
 	@include breakpoint($kyle) {
 		padding: 0 $padding-inner-large;
 		margin-top: 0;
@@ -140,6 +134,7 @@ img.alignright,
 	margin-bottom: 0;
 }
 
+//* No rules here yet.
 .sticky {
 
 }
@@ -220,22 +215,18 @@ div.gallery {
 
 .search-form {
 	.entry-content & {
-		margin: $margin-small 0;
-		&:last-child {
-			margin-bottom: 0;
+		&:not(:last-child) {
+			margin: $margin-small 0;
 		}
-	}
-	input[type="search"] {
-		//width: 100%;
 	}
 	input[type="submit"] {
 		display: none;
 	}
 }
 
-/* ## Contact Form 7
+/* ## Required Form Field
 --------------------------------------------- */
 
-.contact-form-7-required {
+.required {
 	color: uwd-color('red');
 }
