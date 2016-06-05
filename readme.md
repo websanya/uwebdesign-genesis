@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.1.11
+* Fixed small bug w/ pagination `.active` class.
+
 ### 1.1.10
 * Refactored all the CSS.
 

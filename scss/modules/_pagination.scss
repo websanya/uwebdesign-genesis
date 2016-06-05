@@ -31,7 +31,7 @@
 			display: inline-block;
 			vertical-align: top;
 			margin-bottom: 0;
-			.active {
+			&.active {
 				display: inline-block !important;
 				a {
 					background: uwd-color('blue');
