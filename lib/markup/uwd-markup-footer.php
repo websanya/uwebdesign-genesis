@@ -7,7 +7,7 @@ function sp_custom_footer() {
 	?>
 	Все права защищены © 2014-<?php echo date( 'Y' ); ?> uWebDesign. Сделано с <a
 		class="hearts-link" href="https://uwebdesign.ru/humans.txt">♥</a> в Челябинске.<br>
-	<a href="<?php echo home_url( 'user-agreement' ); ?>">Пользовательское
-		соглашение</a>. Сайт работает на <a href="<?php echo home_url( 'smartape' ); ?>">хостинге SmartApe</a>.
+	<a href="<?php echo home_url( 'user-agreement/' ); ?>">Пользовательское
+		соглашение</a>. Сайт работает на <a href="<?php echo home_url( 'smartape/' ); ?>">хостинге SmartApe</a>.
 	<?php
 }

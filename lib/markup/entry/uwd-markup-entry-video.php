@@ -18,18 +18,5 @@ function uwd_entry_video_type_video() {
 	<?php
 }
 
-//* Add icon markup for Video post type.
-//add_action( 'genesis_entry_content', 'uwd_entry_video_type_icon' );
-function uwd_entry_video_type_icon() {
-	if ( get_post_type() != 'videos' ) {
-		return;
-	}
-	?>
-	<div class="entry-content-icon">
-		<span class="dashicons dashicons-video-alt"></span>
-	</div>
-	<?php
-}
-
 //* Add meta support for videos.
 add_post_type_support( 'videos', 'genesis-entry-meta-after-content' );

@@ -30,23 +30,3 @@ function uwd_entry_weekly_markup() {
 	</div>
 	<?php
 }
-
-add_action( 'genesis_before', 'uwd_entry_weekly_remove_content' );
-function uwd_entry_weekly_remove_content() {
-	if ( get_post_type() == 'weeklies' && is_single() ) {
-//		remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
-	}
-}
-
-//* Add icon markup for Weekly post type.
-//add_action( 'genesis_entry_content', 'uwd_entry_weekly_type_icon' );
-function uwd_entry_weekly_type_icon() {
-	if ( get_post_type() != 'weeklies' ) {
-		return;
-	}
-	?>
-	<div class="entry-content-icon">
-		<span class="dashicons dashicons-calendar"></span>
-	</div>
-	<?php
-}

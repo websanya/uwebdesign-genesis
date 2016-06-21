@@ -78,7 +78,7 @@ function uwd_entry_test() {
 	return $args;
 }
 
-require_once( 'entry/uwd-markup-entry-post.php' );
+//require_once( 'entry/uwd-markup-entry-post.php' );
 require_once( 'entry/uwd-markup-entry-post-link.php' );
 require_once( 'entry/uwd-markup-entry-video.php' );
 require_once( 'entry/uwd-markup-entry-weekly.php' );

@@ -7,10 +7,6 @@ function uwd_entry_link_format_icon() {
 		return;
 	}
 	?>
-<!--	<div class="entry-content-icon">-->
-<!--		<span class="dashicons dashicons-admin-links"></span>-->
-		<a class="direct-link" href="<?php the_field( 'post_url' ); ?>" rel="nofollow">&rarr; Прямая ссылка &larr;</a>
-<!-- Придумаем как по-другому сделать. -->
-<!--	</div>-->
+	<a class="direct-link" href="<?php the_field( 'post_url' ); ?>" rel="nofollow">&rarr; Прямая ссылка &larr;</a>
 	<?php
 }

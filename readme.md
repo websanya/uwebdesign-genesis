@@ -12,11 +12,21 @@
 
 ## История изменений
 
+### 1.1.12
+* Added helper functions.
+* Added comments output.
+* Fixed many redirect links.
+* Removed `role` attribute from sidebar.
+* Removed unnecessary php stuff.
+* Changed author comments styling.
+* Fixed a coupled of CSS bugs.
+
 ### 1.1.11
 * Fixed small bug w/ pagination `.active` class.
 
 ### 1.1.10
 * Refactored all the CSS.
+* Updated 'normalize.css' to 4.1.1 version.
 
 ### 1.1.9
 * Fixed whole lot of bugs.

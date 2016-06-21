@@ -20,3 +20,11 @@ function uwd_sidebar_title_markup() {
 
 	return $args;
 }
+
+//* Customize sidebar role markup.
+add_filter( 'genesis_attr_sidebar-primary', 'uwd_attributes_sidebar_primary' );
+function uwd_attributes_sidebar_primary( $attributes ) {
+	$attributes['role'] = '';
+
+	return $attributes;
+}

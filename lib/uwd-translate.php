@@ -6,7 +6,11 @@
 //* Translate entry header meta.
 add_filter( 'genesis_post_info', 'uwd_custom_post_meta' );
 function uwd_custom_post_meta() {
-	$output = '<a href="' . get_the_permalink() . '">[post_date]</a> — <a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ) . '">[post_author]</a>';
+	$output = '<a href="' . get_the_permalink() . '">[post_date]</a> — <a href="' . get_the_permalink() . '#respond">' . russian_comments( get_comments_number(), array(
+			'комментарий',
+			'комментария',
+			'комментариев',
+		) ) . '</a>';
 	if ( current_user_can( 'editor' ) || current_user_can( 'administrator' ) ) {
 		$output .= ' <a class="entry-meta-edit" href="' . get_edit_post_link() . '">(редактировать)</a>';
 	}
@@ -95,4 +99,4 @@ function uwd_next_link() {
 //* Translate author page title.
 add_filter( 'genesis_author_box_title', function() {
 	return 'Автор: ' . get_the_author();
-});
+} );

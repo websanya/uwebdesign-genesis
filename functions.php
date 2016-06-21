@@ -8,11 +8,8 @@ define( 'CHILD_THEME_NAME', 'uWebDesign Theme' );
 define( 'CHILD_THEME_URL', 'https://uwebdesign.ru/' );
 define( 'CHILD_THEME_VERSION', '1.1.2' );
 
-//* Check anything.
-add_action( 'genesis_before_header', 'custom_shit' );
-function custom_shit() {
-
-}
+//* Helper functions.
+require_once( 'lib/_helpers.php' );
 
 //* Lots of theme supports stuff.
 require_once( 'lib/uwd-theme-supports.php' );

@@ -8,15 +8,15 @@ function uwd_footer_widgets_markup() {
 		<div class="footer-widgets-widget">
 			<h5>Полезные ссылки</h5>
 			<ul>
-				<li><a href="<?php echo home_url( 'about' ); ?>">О проекте</a></li>
-				<li><a href="<?php echo home_url( 'faq' ); ?>">Часто задаваемые вопросы</a></li>
-				<li><a href="<?php echo home_url( 'advertise' ); ?>">Реклама на uWebDesign</a></li>
-				<li><a href="<?php echo home_url( 'subscribe' ); ?>">Мы в соц. сетях</a></li>
-				<li><a href="<?php echo home_url( 'contact' ); ?>">Связаться с нами</a></li>
+				<li><a href="<?php echo home_url( 'about/' ); ?>">О проекте</a></li>
+				<li><a href="<?php echo home_url( 'faq/' ); ?>">Часто задаваемые вопросы</a></li>
+				<li><a href="<?php echo home_url( 'advertise/' ); ?>">Реклама на uWebDesign</a></li>
+				<li><a href="<?php echo home_url( 'subscribe/' ); ?>">Мы в соц. сетях</a></li>
+				<li><a href="<?php echo home_url( 'contact/' ); ?>">Связаться с нами</a></li>
 			</ul>
 		</div>
 		<div class="footer-widgets-widget">
-			<a href="<?php echo home_url( 'donate' ); ?>">
+			<a href="<?php echo home_url( 'donate/' ); ?>">
 				<img class="donate-banner" src="<?php echo get_stylesheet_directory_uri(); ?>/img/donate.jpg"
 				     alt="Пожертвуй на развитие проекта">
 			</a>

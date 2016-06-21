@@ -31,15 +31,39 @@
 }
 
 li.comment {
+	position: relative;
 	padding: $padding-inner-small;
 	margin-top: $margin-small;
 	list-style: none;
 	background: uwd-color('gray-box');
 	&:target {
-		border: 5px solid uwd-color('yellow');
+		border: $border-small solid uwd-color('yellow') !important;
+		&:before {
+			content: '#' !important;
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 0 $padding-inner-tiny $padding-inner-micro $padding-inner-tiny - 0.2rem;
+			font-size: $font-size-tiny;
+			background: uwd-color('yellow') !important;
+			color: uwd-color('white');
+		}
 	}
 	&.bypostauthor {
-		background: rgba(uwd-color('blue'), 0.1);
+		padding-top: 4.5rem;
+		border: $border-small solid uwd-color('green');
+		&:before {
+			content: 'автор';
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 0 $padding-inner-tiny $padding-inner-micro $padding-inner-tiny - 0.2rem;
+			font-size: $font-size-tiny;
+			background: uwd-color('green');
+			color: uwd-color('white');
+		}
 	}
 	.comment-author {
 		margin-bottom: 0;

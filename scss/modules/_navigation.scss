@@ -46,12 +46,14 @@
 	overflow-y: hidden;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
+	font-size: 0;
 	@include breakpoint($kyle) {
 		overflow: visible;
 	}
 	li.menu-item {
 		display: inline-block;
 		margin: 0;
+		font-size: 1.6rem;
 		&:not(:last-of-type) {
 			&:after {
 				content: '•';
