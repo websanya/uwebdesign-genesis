@@ -3,8 +3,21 @@
  * Contains the post embed base template
  */
 
-get_header( 'embed' );
+if ( ! headers_sent() ) {
+	header( 'X-WP-embed: true' );
+}
 
+?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?> class="no-js">
+<head>
+	<title><?php echo wp_get_document_title(); ?></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<?php do_action( 'embed_head' ); ?>
+</head>
+<body <?php body_class(); ?>>
+
+<?php
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post();
 		?>
@@ -20,42 +33,21 @@ if ( have_posts() ) :
 				$thumbnail_id = get_the_ID();
 			}
 
-			/**
-			 * Filter the thumbnail image size for use in the embed template.
-			 */
-			$image_size = 'medium';
-			$image_size = apply_filters( 'embed_thumbnail_image_size', $image_size, $thumbnail_id );
+			$image_size = 'medium'; // Fallback.
 
-			/**
-			 * Filter the thumbnail shape for use in the embed template.
-			 *
-			 * Rectangular images are shown above the title while square images
-			 * are shown next to the content.
-			 */
-			$shape = 'square';
-			$shape = apply_filters( 'embed_thumbnail_image_shape', $shape, $thumbnail_id );
+			?>
 
-			if ( 'rectangular' === $shape ) : ?>
-				<div class="wp-embed-featured-image rectangular">
-					<a href="<?php the_permalink(); ?>" target="_top">
-						<?php echo wp_get_attachment_image( $thumbnail_id, $image_size ); ?>
-					</a>
-				</div>
-			<?php endif; ?>
+			<div class="wp-embed-featured-image square">
+				<a href="<?php the_permalink(); ?>" target="_top">
+					<?php echo wp_get_attachment_image( $thumbnail_id, $image_size ); ?>
+				</a>
+			</div>
 
 			<p class="wp-embed-heading">
 				<a href="<?php the_permalink(); ?>" target="_top">
 					<?php the_title(); ?>
 				</a>
 			</p>
-
-			<?php if ( 'square' === $shape ) : ?>
-				<div class="wp-embed-featured-image square">
-					<a href="<?php the_permalink(); ?>" target="_top">
-						<?php echo wp_get_attachment_image( $thumbnail_id, $image_size ); ?>
-					</a>
-				</div>
-			<?php endif; ?>
 
 			<div class="wp-embed-excerpt"><?php the_excerpt_embed(); ?></div>
 
@@ -115,4 +107,9 @@ else :
 	<?php
 endif;
 
-get_footer( 'embed' );
+do_action( 'embed_footer' );
+
+?>
+
+</body>
+</html>

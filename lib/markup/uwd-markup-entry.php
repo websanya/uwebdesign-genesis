@@ -31,7 +31,7 @@ function uwd_archive_do_post_image() {
 		) );
 
 		if ( ! empty( $img ) ) {
-			printf( '<a href="%s" aria-hidden="true"><img class="post-image entry-image" src="%s" alt="' . get_the_title() .'"></a>', get_permalink(), $img );
+			printf( '<a href="%s" aria-hidden="true"><img class="post-image entry-image" src="%s" alt="' . get_the_title() . '"></a>', get_permalink(), $img );
 		} else {
 			printf( '<a href="%s" aria-hidden="true"><img width="622" height="415" class="post-image entry-image" src="%s" alt="placeholder image"></a>', get_permalink(), get_stylesheet_directory_uri() . '/img/placeholder.jpg' );
 		}
@@ -93,4 +93,29 @@ function uwd_entry_ya_share() {
 		echo '<div id="share-' . get_the_ID() . '"></div>';
 	}
 
+}
+
+//* This function adds nice anchor with id attribute to our h2 tags for reference.
+add_action( 'genesis_entry_header', function() {
+	add_filter( 'the_content', 'uwd_anchor_content_h2' );
+} );
+function uwd_anchor_content_h2( $content ) {
+
+	//* Pattern that we want to match.
+	$pattern = '/<h2>(.*?)<\/h2>/';
+
+	/**
+	 * Now run the pattern and callback function on content
+	 * and process it through a function that replaces the title with an id.
+	 */
+	$content = preg_replace_callback( $pattern, function( $matches ) {
+
+		global $i;
+		$title = $matches[1];
+		$slug  = 'subtitle';
+		$v = ++$i;
+		return '<a class="entry-subtitle-link" href="' . get_the_permalink() . '#' . $slug . '-' . $v .  '">#</a> <h2 class="entry-subtitle" id="' . $slug . '-' . $v . '">' . $title . '</h2>';
+	}, $content );
+
+	return $content;
 }

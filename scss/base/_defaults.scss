@@ -153,6 +153,10 @@ pre {
 	font-size: $font-size-tiny;
 	background-color: uwd-color('gray-dark');
 	color: uwd-color('white');
+	-ms-word-break: break-all;
+	word-break: break-all;
+	/* Non standard for Webkit. */
+	word-break: break-word;
 }
 
 small,

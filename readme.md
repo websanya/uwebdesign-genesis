@@ -12,6 +12,11 @@
 
 ## История изменений
 
+### 1.1.13
+* Fixed embed functionality (kinda).
+* Added subtitle anchors for all the posts.
+* Fixed some CSS bugs.
+
 ### 1.1.12
 * Added helper functions.
 * Added comments output.

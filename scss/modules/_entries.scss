@@ -51,6 +51,7 @@
 			text-align: center;
 		}
 		.entry-title {
+			margin-bottom: $margin-tiny;
 			font-size: $font-size-h2;
 			@include breakpoint($stan) {
 				font-size: $font-size-h1;
@@ -151,6 +152,20 @@
 		ul {
 			margin-top: $margin-tiny;
 		}
+	}
+}
+
+.entry-subtitle {
+	display: inline-block;
+	margin-left: $margin-micro;
+}
+
+.entry-subtitle-link {
+	font-size: $font-size-h3;
+	line-height: $line-height-small;
+	text-decoration: none;
+	&:visited {
+		color: uwd-color('blue');
 	}
 }
 
