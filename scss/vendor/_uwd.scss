@@ -14,17 +14,19 @@
 a.tweet-this {
 	position: relative;
 	padding: $padding-inner-small;
-	margin-bottom: $margin-small;
+	margin: $margin-small 0;
 	display: block;
 	font-size: $font-size-h3;
 	text-align: center;
+	text-decoration: none;
 	color: initial;
 	@include breakpoint($kyle) {
 		padding: $padding-inner-large;
-		margin-bottom: $margin-large;
+		margin: $margin-large 0;
 	}
 	&:hover {
 		text-decoration: none;
+		color: uwd-color('red');
 	}
 	&:before {
 		content: "";

@@ -12,6 +12,10 @@
 
 ## История изменений
 
+### 1.1.14
+* Added YouTube fullscreen functionality.
+* Fixed some CSS bugs.
+
 ### 1.1.13
 * Fixed embed functionality (kinda).
 * Added subtitle anchors for all the posts.

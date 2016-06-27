@@ -13,7 +13,7 @@ function uwd_entry_video_type_video() {
 	?>
 	<div class="entry-video">
 		<iframe width="100%" height="390" src="https://www.youtube.com/embed/<?php echo $video_id; ?>"
-		        frameborder="0"></iframe>
+		        frameborder="0" allowfullscreen></iframe>
 	</div>
 	<?php
 }
