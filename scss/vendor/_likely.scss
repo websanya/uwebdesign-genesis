@@ -9,7 +9,7 @@
 }
 
 .likely {
-	display: inline-block;
+	display: block;
 	margin-top: $margin-tiny;
 	@include breakpoint($kyle) {
 		margin-top: $margin-small;

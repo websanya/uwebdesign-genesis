@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.1.16
+* Fixed CSS bug.
+
 ### 1.1.15
 * Changed sharing buttons from Ya to Birman.
 
