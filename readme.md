@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.1.17
+* Changed featured image size.
+
 ### 1.1.16
 * Fixed CSS bug.
 
