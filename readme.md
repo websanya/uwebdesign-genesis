@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.1.15
+* Changed sharing buttons from Ya to Birman.
+
 ### 1.1.14
 * Added YouTube fullscreen functionality.
 * Fixed some CSS bugs.

@@ -47,7 +47,6 @@ function uwd_entry_video_type_taxonomy() {
 //* Customize 'post_terms' shortcode default args.
 add_filter( 'genesis_post_terms_shortcode_defaults', 'uwd_entry_test' );
 function uwd_entry_test() {
-
 	switch ( get_post_type() ) {
 		case 'videos':
 			$args = array(
@@ -84,13 +83,21 @@ require_once( 'entry/uwd-markup-entry-video.php' );
 require_once( 'entry/uwd-markup-entry-weekly.php' );
 
 //* Connect Ya Share.
-add_action( 'genesis_entry_content', 'uwd_entry_ya_share', 20 );
-function uwd_entry_ya_share() {
+add_action( 'genesis_entry_content', 'uwd_entry_share', 20 );
+function uwd_entry_share() {
 
 	if ( ! is_single() ) {
 		return;
 	} else {
-		echo '<div id="share-' . get_the_ID() . '"></div>';
+		?>
+		<div class="likely likely-big">
+			<div class="twitter"></div>
+			<div class="vkontakte"></div>
+			<div class="facebook"></div>
+			<div class="gplus"></div>
+			<div class="telegram"></div>
+		</div>
+		<?php
 	}
 
 }
@@ -113,8 +120,9 @@ function uwd_anchor_content_h2( $content ) {
 		global $i;
 		$title = $matches[1];
 		$slug  = 'subtitle';
-		$v = ++$i;
-		return '<a class="entry-subtitle-link" href="' . get_the_permalink() . '#' . $slug . '-' . $v .  '">#</a> <h2 class="entry-subtitle" id="' . $slug . '-' . $v . '">' . $title . '</h2>';
+		$v     = ++ $i;
+
+		return '<a class="entry-subtitle-link" href="' . get_the_permalink() . '#' . $slug . '-' . $v . '">#</a> <h2 class="entry-subtitle" id="' . $slug . '-' . $v . '">' . $title . '</h2>';
 	}, $content );
 
 	return $content;
