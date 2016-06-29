@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.1.20
+* Fixed a bug w/ da header.
+
 ### 1.1.19
 * Added link to header.
 
