@@ -12,6 +12,11 @@
 
 ## История изменений
 
+### 1.1.21
+* Changed a couple of link in da footer.
+* Optimized some images.
+* Fixed a CSS bug.
+
 ### 1.1.20
 * Fixed a bug w/ da header.
 

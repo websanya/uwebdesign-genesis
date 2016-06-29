@@ -10,9 +10,9 @@ function uwd_footer_widgets_markup() {
 			<ul>
 				<li><a href="<?php echo home_url( 'about/' ); ?>">О проекте</a></li>
 				<li><a href="<?php echo home_url( 'faq/' ); ?>">Часто задаваемые вопросы</a></li>
-				<li><a href="<?php echo home_url( 'advertise/' ); ?>">Реклама на uWebDesign</a></li>
-				<li><a href="<?php echo home_url( 'subscribe/' ); ?>">Мы в соц. сетях</a></li>
-				<li><a href="<?php echo home_url( 'contact/' ); ?>">Связаться с нами</a></li>
+				<li><a href="<?php echo home_url( 'advertise/' ); ?>">Реклама</a></li>
+				<li><a href="<?php echo home_url( 'subscribe/' ); ?>">Социальные сети</a></li>
+				<li><a href="<?php echo home_url( 'contact/' ); ?>">Контакты</a></li>
 			</ul>
 		</div>
 		<div class="footer-widgets-widget">

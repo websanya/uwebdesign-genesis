@@ -161,7 +161,7 @@ $susy: (
 	@include span(12);
 	@include breakpoint($kyle) {
 		padding: $padding-inner-large;
-		margin-bottom: 0;
+		margin-bottom: 0 !important;
 		@include span(4);
 		&:last-child {
 			@include span(4 last);
