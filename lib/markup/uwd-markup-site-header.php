@@ -50,6 +50,13 @@ function uwd_header_right() {
 	<?php
 }
 
+//* Add site logo.
+add_action( 'genesis_site_title', function() {
+	?>
+	<img class="site-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="">
+	<?php
+}, 9 );
+
 //* Reposition the breadcrumbs.
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'genesis_before_content', 'genesis_do_breadcrumbs' );

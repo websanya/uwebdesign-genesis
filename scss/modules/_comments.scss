@@ -78,12 +78,14 @@ li.comment {
 		margin-right: $margin-micro;
 	}
 	.comment-content {
-		margin-bottom: $margin-tiny;
 		clear: both;
 		word-wrap: break-word;
 		.alert {
 			font-size: $font-size-tiny;
 			color: uwd-color('red');
+		}
+		&:not(:last-child) {
+			margin-bottom: $margin-tiny;
 		}
 		& > ul > li:first-child,
 		& > ol > li:first-child {

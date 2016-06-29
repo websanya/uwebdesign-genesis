@@ -72,7 +72,7 @@ $susy: (
 /* ### Header Banner Container */
 
 .header-banner-container {
-	padding: 0 0 $padding-inner-x-small 0;
+	padding: 0;
 	@include span(12);
 	@include breakpoint($stan) {
 		padding: 0 0 $padding-inner-small 0;

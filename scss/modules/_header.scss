@@ -2,16 +2,38 @@
 --------------------------------------------- */
 
 .site-header {
-	background: uwd-color('gray-box');
+	//background: uwd-color('gray-box');
+	background-image: url('img/bg.jpg');
+	background-color: rgba(uwd-color('black'), 0.3);
+	background-size: cover;
 }
 
 /* ## Title Area
 --------------------------------------------- */
 
 .title-area {
+	color: uwd-color('white');
+	.site-title a {
+		color: uwd-color('white');
+	}
 	text-align: center;
 	@include breakpoint($kyle) {
 		text-align: left;
+	}
+}
+
+.site-logo {
+	margin: 2rem auto;
+	max-width: 25rem;
+	@include breakpoint($kyle) {
+		max-width: 100%;
+		max-height: 6rem;
+		margin: 0;
+	}
+	& + .site-title,
+	& + .site-title + .site-description {
+		position: absolute;
+		left: -9999px;
 	}
 }
 

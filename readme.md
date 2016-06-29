@@ -12,6 +12,10 @@
 
 ## История изменений
 
+### 1.1.18
+* Added header image & logo.
+* Fixed a CSS bug.
+
 ### 1.1.17
 * Changed featured image size.
 
