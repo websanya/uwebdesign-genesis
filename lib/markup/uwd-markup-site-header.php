@@ -53,7 +53,9 @@ function uwd_header_right() {
 //* Add site logo.
 add_action( 'genesis_site_title', function() {
 	?>
-	<img class="site-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="">
+	<a href="<?php echo home_url(); ?>">
+		<img class="site-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="">
+	</a>
 	<?php
 }, 9 );
 
