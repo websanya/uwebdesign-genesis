@@ -38,10 +38,28 @@ function uwd_archive_do_post_image() {
 	}
 }
 
+add_shortcode( 'post_views', 'uwd_post_views_shortcode' );
+function uwd_post_views_shortcode( $atts ) {
+
+	global $post;
+
+	//* Do nothing if no tags
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return false;
+	}
+
+	if ( is_callable( array( 'Pageviews', 'get_placeholder' ) ) ) {
+		$placeholder = Pageviews::get_placeholder( $post->ID );
+		return 'Просмотры: ' . $placeholder;
+	} else {
+		return false;
+	}
+}
+
 //* Customize entry-meta to include post_terms shortcode.
 add_filter( 'genesis_post_meta', 'uwd_entry_video_type_taxonomy' );
 function uwd_entry_video_type_taxonomy() {
-	return '[post_categories] [post_terms] [post_tags]';
+	return '[post_categories] [post_terms] [post_tags] [post_views]';
 }
 
 //* Customize 'post_terms' shortcode default args.

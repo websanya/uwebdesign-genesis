@@ -23,6 +23,11 @@ add_theme_support( 'genesis-menus', array(
 	'primary' => 'Основное навигационное меню',
 ) );
 
+//* Add support for Pageviews plugin.
+add_action( 'after_setup_theme', function() {
+	add_theme_support( 'pageviews' );
+});
+
 //* Remove Genesis Layout Settings.
 remove_theme_support( 'genesis-inpost-layouts' );
 remove_theme_support( 'genesis-archive-layouts' );
