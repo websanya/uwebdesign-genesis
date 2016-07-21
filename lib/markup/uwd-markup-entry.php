@@ -95,11 +95,6 @@ function uwd_entry_test() {
 	return $args;
 }
 
-//require_once( 'entry/uwd-markup-entry-post.php' );
-require_once( 'entry/uwd-markup-entry-post-link.php' );
-require_once( 'entry/uwd-markup-entry-video.php' );
-require_once( 'entry/uwd-markup-entry-weekly.php' );
-
 //* Connect Ya Share.
 add_action( 'genesis_entry_content', 'uwd_entry_share', 20 );
 function uwd_entry_share() {
@@ -145,3 +140,9 @@ function uwd_anchor_content_h2( $content ) {
 
 	return $content;
 }
+
+//require_once( 'entry/uwd-markup-entry-post.php' );
+require_once( 'entry/uwd-markup-entry-post-link.php' );
+require_once( 'entry/uwd-markup-entry-video.php' );
+require_once( 'entry/uwd-markup-entry-weekly.php' );
+require_once( 'entry/uwd-markup-entry-book.php' );
