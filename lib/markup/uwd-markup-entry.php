@@ -38,6 +38,7 @@ function uwd_archive_do_post_image() {
 	}
 }
 
+//* Add Pageviews plugin support.
 add_shortcode( 'post_views', 'uwd_post_views_shortcode' );
 function uwd_post_views_shortcode( $atts ) {
 
