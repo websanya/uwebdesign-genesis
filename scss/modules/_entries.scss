@@ -164,6 +164,9 @@
 	font-size: $font-size-h3;
 	line-height: $line-height-small;
 	text-decoration: none;
+	position: absolute;
+	left: $margin-tiny;
+	margin-top: $margin-small;
 	&:visited {
 		color: uwd-color('blue');
 	}

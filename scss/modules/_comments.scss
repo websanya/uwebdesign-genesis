@@ -37,6 +37,7 @@ li.comment {
 	list-style: none;
 	background: uwd-color('gray-box');
 	&:target {
+		padding-top: 4.5rem;
 		border: $border-small solid uwd-color('yellow') !important;
 		&:before {
 			content: '#' !important;
