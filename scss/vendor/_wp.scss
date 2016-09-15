@@ -99,7 +99,7 @@ a.alignright {
 img.centered,
 .aligncenter {
 	display: block;
-	margin: 0 auto $margin-small;
+	margin: $margin-small auto;
 }
 
 img.alignnone,
@@ -110,13 +110,13 @@ img.alignnone,
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
-	margin: 0 $margin-small $margin-small 0;
+	margin: $margin-small $margin-small $margin-small 0;
 }
 
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
-	margin: 0 0 $margin-small $margin-small;
+	margin: $margin-small 0 $margin-small $margin-small;
 }
 
 .wp-caption {
@@ -126,7 +126,7 @@ img.alignright,
 }
 
 .wp-caption-text {
-	font-size: $font-size-tiny;
+	font-size: $font-size-micro;
 	text-align: center;
 }
 

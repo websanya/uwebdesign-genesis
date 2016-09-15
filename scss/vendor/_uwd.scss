@@ -70,6 +70,7 @@ a.tweet-this {
 	margin: $margin-small 0;
 	display: block;
 	font-size: $font-size-h4;
+	line-height: $line-height-small;
 	text-align: center;
 	color: initial;
 	@include breakpoint($kyle) {
