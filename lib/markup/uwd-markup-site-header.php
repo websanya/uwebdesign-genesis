@@ -68,7 +68,7 @@ add_action( 'genesis_before_content', 'genesis_do_breadcrumbs' );
  */
 function yst_site_icons( $meta_tags ) {
 	// Mask icon for Safari pinned tabs
-	$meta_tags[] = "<link rel='mask-icon' color='#ff0000' href='" . get_stylesheet_directory_uri() . "/img/logo-icon-black.svg'>";
+	$meta_tags[] = "<link rel='mask-icon' color='#103154' href='" . get_stylesheet_directory_uri() . "/img/logo-icon-black.svg'>";
 
 	return $meta_tags;
 }
