@@ -62,3 +62,14 @@ add_action( 'genesis_site_title', function() {
 //* Reposition the breadcrumbs.
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'genesis_before_content', 'genesis_do_breadcrumbs' );
+
+/**
+ * Adds a pinned tabs icon
+ */
+function yst_site_icons( $meta_tags ) {
+	// Mask icon for Safari pinned tabs
+	$meta_tags[] = "<link rel='mask-icon' color='#ff0000' href='" . get_stylesheet_directory_uri() . "/img/logo-icon-black.svg'>";
+
+	return $meta_tags;
+}
+add_filter( 'site_icon_meta_tags', 'yst_site_icons' );

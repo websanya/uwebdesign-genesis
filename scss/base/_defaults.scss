@@ -65,7 +65,7 @@ dl {
 	margin: 0;
 	padding: 0;
 	&:not(:last-child) {
-		margin-bottom: $margin-tiny;
+		margin-bottom: $margin-n-small;
 	}
 }
 
@@ -85,7 +85,7 @@ dd {
 	margin-bottom: 0;
 	padding: 0;
 	&:not(:last-child) {
-		margin-bottom: $margin-tiny;
+		margin-bottom: $margin-n-small;
 	}
 }
 
@@ -127,7 +127,7 @@ cite {
 	blockquote & {
 		display: block;
 		text-align: right;
-		margin-top: $margin-tiny;
+		margin-top: $margin-n-small;
 	}
 	font-weight: $font-weight-bold;
 }
