@@ -66,7 +66,7 @@ add_action( 'genesis_before_content', 'genesis_do_breadcrumbs' );
 /**
  * Adds a pinned tabs icon
  */
-add_filter( 'wp_head', 'uwd_safari_icon', 666 );
+add_action( 'wp_head', 'uwd_safari_icon', 666 );
 function uwd_safari_icon() {
 	echo "<link rel='mask-icon' color='#103154' href='" . get_stylesheet_directory_uri() . "/img/logo-icon-black.svg'>";
 }
