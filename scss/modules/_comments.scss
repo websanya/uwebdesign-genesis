@@ -124,3 +124,7 @@ ul.children {
 		margin-bottom: 0;
 	}
 }
+
+textarea[name=comment] {
+	resize: none;
+}

@@ -126,3 +126,31 @@ span.shortcode-this-icon {
 		text-decoration: none;
 	}
 }
+
+.uwd-widget-meta {
+	color: uwd-color('gray-dark');
+}
+
+/* Quick tags fix, just because. */
+#qt_comment_quote-shadow {
+	display: none;
+}
+
+#commentform div.quicktags-toolbar {
+	background: uwd-color('gray-light');
+	border-radius: 0;
+	border: .1rem solid #dcdcdc;
+	border-bottom: 0;
+	padding: 1px 2px;
+	input {
+		margin: 2px 1px;
+		padding: 0.2em 0.5em;
+		height: initial;
+		background: uwd-color('gray-light');
+		&:hover {
+			background: uwd-color('gray-light');
+			border-color: uwd-color('gray-dark');
+			color: initial;
+		}
+	}
+}

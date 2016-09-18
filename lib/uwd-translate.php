@@ -45,7 +45,11 @@ function sp_breadcrumb_args( $args ) {
 //* Translate comments title.
 add_filter( 'genesis_title_comments', 'uwd_comments_text' );
 function uwd_comments_text() {
-	return '<h4 class="comment-list-title">Комментарии</h4>';
+	return '<h4 class="comment-list-title">' . russian_comments( get_comments_number(), array(
+		'комментарий',
+		'комментария',
+		'комментариев',
+	) ) . '</h4>';
 }
 
 //* Translate comments author text.

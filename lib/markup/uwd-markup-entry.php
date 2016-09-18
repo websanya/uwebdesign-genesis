@@ -51,6 +51,7 @@ function uwd_post_views_shortcode( $atts ) {
 
 	if ( is_callable( array( 'Pageviews', 'get_placeholder' ) ) ) {
 		$placeholder = Pageviews::get_placeholder( $post->ID );
+
 		return 'Просмотры: ' . $placeholder;
 	} else {
 		return false;
