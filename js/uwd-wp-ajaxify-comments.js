@@ -211,6 +211,12 @@ WPAC._ReplaceComments = function(data, commentUrl, useFallbackUrl, formData, sel
 				form.replaceWith(newCommentForm);
 			}
 
+			quicktags({
+				id: "comment",
+				buttons: "link,em,strong,ul,ol,li,code"
+			});
+			QTags.addButton('quote-shadow','quote','<blockquote>','</blockquote>','quote');
+
 		} else {
 
 			WPAC._Debug("info", "Try to re-inject comment form...");
@@ -231,6 +237,7 @@ WPAC._ReplaceComments = function(data, commentUrl, useFallbackUrl, formData, sel
 				return false;
 			}
 			wpTempFormDiv.replaceWith(newRespondContainer);
+
 			quicktags({
 				id: "comment",
 				buttons: "link,em,strong,ul,ol,li,code"

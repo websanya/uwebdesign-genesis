@@ -66,6 +66,9 @@ li.comment {
 			color: uwd-color('white');
 		}
 	}
+	& + #respond {
+		margin-top: $margin-small;
+	}
 	.comment-author {
 		margin-bottom: 0;
 	}

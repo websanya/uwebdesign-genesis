@@ -6,8 +6,9 @@
 //* Add uWebDesign scripts.
 add_action( 'wp_enqueue_scripts', 'uwd_scripts' );
 function uwd_scripts() {
+	//* Change jQuery.
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '', true );
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), null, false );
 	wp_enqueue_script( 'uwd-color-thief', get_stylesheet_directory_uri() . '/js/min/uwebdesign.min.js', array( 'jquery' ), '', true );
 	if ( is_single() ) {
 		wp_enqueue_script( 'uwd-likely', get_stylesheet_directory_uri() . '/js/likely.js', null, null, false );
