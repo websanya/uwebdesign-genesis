@@ -45,7 +45,7 @@ li.comment {
 		margin-bottom: 0;
 	}
 	&.bypostauthor {
-		.comment-header .comment-author:before {
+		> .comment .comment-header .comment-author:before {
 			content: 'Автор поста' !important;
 			display: inline-block;
 			padding: 0 $padding-inner-micro;
@@ -58,7 +58,7 @@ li.comment {
 		}
 	}
 	&:target {
-		.comment-header .comment-author:before {
+		> .comment .comment-header .comment-author:before {
 			content: 'Открыт по ссылке' !important;
 			display: inline-block;
 			padding: 0 $padding-inner-micro;
