@@ -3,7 +3,7 @@
 
 .entry-comments,
 .comment-respond {
-	padding: $padding-inner-small;
+	padding: $padding-inner-x-small;
 	@include breakpoint($kyle) {
 		padding: $padding-inner-large;
 	}
@@ -25,44 +25,48 @@
 .comment-list {
 	padding-left: 0;
 	li {
-		padding: $padding-inner-x-small 0 0 $padding-inner-x-small;
 		list-style-position: inside;
 	}
 }
 
 li.comment {
 	position: relative;
-	padding: $padding-inner-small;
-	margin-top: $margin-small;
+	margin: $margin-tiny 0;
 	list-style: none;
-	background: uwd-color('gray-box');
-	&:target {
-		padding-top: 4.5rem;
-		border: $border-small solid uwd-color('yellow') !important;
-		&:before {
-			content: '#' !important;
+	.depth-2 {
+		margin-left: $margin-n-small;
+	}
+	&.depth-1:not(:last-of-type) {
+		margin-bottom: $margin-n-small;
+		border-bottom: $border-tiny dotted uwd-color('gray-dark');
+		padding-bottom: $padding-inner-m-small - $border-tiny;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&.bypostauthor {
+		.comment-header .comment-author:before {
+			content: 'Автор поста' !important;
 			display: inline-block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			padding: 0 $padding-inner-tiny $padding-inner-micro $padding-inner-tiny - 0.2rem;
+			padding: 0 $padding-inner-micro;
+			margin-right: 0.2rem;
+			border-radius: $border-small;
 			font-size: $font-size-tiny;
-			background: uwd-color('yellow') !important;
+			line-height: $line-height-tiny;
+			background: uwd-color('green') !important;
 			color: uwd-color('white');
 		}
 	}
-	&.bypostauthor {
-		padding-top: 4.5rem;
-		border: $border-small solid uwd-color('green');
-		&:before {
-			content: 'автор';
+	&:target {
+		.comment-header .comment-author:before {
+			content: 'Открыт по ссылке' !important;
 			display: inline-block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			padding: 0 $padding-inner-tiny $padding-inner-micro $padding-inner-tiny - 0.2rem;
+			padding: 0 $padding-inner-micro;
+			margin-right: 0.2rem;
+			border-radius: $border-small;
 			font-size: $font-size-tiny;
-			background: uwd-color('green');
+			line-height: $line-height-tiny;
+			background: uwd-color('yellow') !important;
 			color: uwd-color('white');
 		}
 	}
@@ -80,6 +84,7 @@ li.comment {
 	.comment-meta {
 		float: left;
 		margin-right: $margin-micro;
+		margin-bottom: $margin-tiny;
 	}
 	.comment-content {
 		clear: both;
@@ -100,6 +105,15 @@ li.comment {
 
 ul.children {
 	padding-left: 0;
+	margin-top: 1.5rem - $border-tiny;
+	border-top: $border-tiny dotted uwd-color('gray-dark');
+	li:first-child {
+		margin-top: 1.5rem;
+	}
+	li:not(:last-of-type) {
+		border-bottom: $border-tiny dotted uwd-color('gray-dark');
+		padding-bottom: $padding-inner-m-small - $border-tiny;
+	}
 }
 
 /* ### Comment Respond container */
@@ -116,7 +130,7 @@ ul.children {
 	input[type="email"],
 	input[type="text"],
 	input[type="url"] {
-		width: 50%;
+		max-width: 500px;
 	}
 	label {
 		display: block;
