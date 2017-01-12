@@ -6,7 +6,7 @@
 		@include transform(scale(1));
 	}
 	50% {
-		background-color: uwd-color('yellow');
+		background-color: lighten(uwd-color('yellow'), 20%);
 		@include transform(scale(1.1));
 	}
 	100% {
