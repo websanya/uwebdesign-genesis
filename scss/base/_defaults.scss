@@ -328,3 +328,14 @@ th {
 	padding: $padding-inner-x-small 0;
 	font-weight: $font-weight-regular;
 }
+
+/* ## Pseudo Classes
+--------------------------------------------- */
+
+div,
+section,
+article {
+	&:target {
+		@include animation(highlight 2s 2s ease);
+	}
+}

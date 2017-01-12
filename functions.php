@@ -37,3 +37,13 @@ require_once( 'lib/markup/uwd-markup-embed.php' );
 
 //* Translation markup stuff.
 require_once( 'lib/uwd-translate.php' );
+
+//* Try some dashboard widgets removement.
+if ( ! current_user_can( 'manage_options' ) ) {
+	add_action('wp_dashboard_setup', 'wpse_73561_remove_all_dashboard_meta_boxes', 9999 );
+	function wpse_73561_remove_all_dashboard_meta_boxes() {
+		global $wp_meta_boxes;
+		$wp_meta_boxes['dashboard']['normal']['core'] = array();
+		$wp_meta_boxes['dashboard']['side']['core'] = array();
+	}
+}

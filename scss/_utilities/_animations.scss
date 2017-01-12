@@ -1,0 +1,16 @@
+//* ### Animation Declarations */
+
+@keyframes highlight {
+	0% {
+		background-color: transparent;
+		@include transform(scale(1));
+	}
+	50% {
+		background-color: uwd-color('yellow');
+		@include transform(scale(1.1));
+	}
+	100% {
+		border-left-color: transparent;
+		@include transform(scale(1));
+	}
+}
