@@ -36,7 +36,7 @@ function uwd_header_right() {
 
 		while ( $query->have_posts() ) : $query->the_post();
 			?>
-			<a href="<?php the_field( 'banner_url' ); ?>?banner=header" rel="nofollow">
+			<a href="<?php the_field( 'banner_url' ); ?>?ban=header" rel="nofollow">
 				<img width="770" height="140" src="<?php the_field( 'banner_img_header' ); ?>"
 				     class="header-banner-image" alt="<?php the_title(); ?>">
 			</a>
