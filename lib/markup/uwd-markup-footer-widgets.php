@@ -11,6 +11,7 @@ function uwd_footer_widgets_markup() {
 				<li><a href="<?php echo home_url( 'about/' ); ?>">О проекте</a></li>
 				<li><a href="<?php echo home_url( 'faq/' ); ?>">Часто задаваемые вопросы</a></li>
 				<li><a href="<?php echo home_url( 'advertise/' ); ?>">Реклама</a></li>
+				<li><a href="<?php echo home_url( 'donate/' ); ?>">Поддержи проект!</a></li>
 				<li><a href="<?php echo home_url( 'contact/' ); ?>">Контакты</a></li>
 			</ul>
 		</div>
